@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CheDex Free Notepads | Free Custom Notepad Editor Templates</title>
+
+<meta name="description" content="Free notepad templates with text customization. Add custom text, change colors, and position text on beautiful notepad designs. 100% free online editor.">
+<meta name="keywords" content="free notepads, notepad templates, editable notepads, printable notes, notepad editor">
+<meta name="author" content="CheDex Free Notepads">
+
+<link rel="canonical" href="https://chedexstore.github.io/">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}
+body{margin:0;background:#fff;color:#111;line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:999}
+.nav{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-size:22px;font-weight:800}
+.menu{display:flex;gap:22px}
+.menu a{font-weight:600}
+
+/* DONATE TOP */
+.donate-top{display:flex;gap:10px;align-items:center}
+.donate-top a{
+ display:flex;
+ align-items:center;
+ gap:6px;
+ border:1px solid #000;
+ padding:6px 12px;
+ border-radius:20px;
+ font-size:12px;
+ font-weight:700;
+}
+.donate-top a:hover{background:#000;color:#fff}
+
+/* BURGER */
+.burger{display:none;font-size:26px;cursor:pointer}
+.mobile-menu{
+ display:none;
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ background:#fff;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ gap:24px;
+ z-index:9999;
+}
+.mobile-menu a{font-size:22px;font-weight:700}
+.close-btn{position:absolute;top:22px;right:22px;font-size:30px;cursor:pointer}
+.mobile-social{display:flex;gap:16px;margin-top:20px}
+.mobile-social a{
+ border:1px solid #000;
+ border-radius:50%;
+ width:38px;
+ height:38px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+/* HERO */
+.hero{padding:90px 20px 70px;text-align:center}
+.hero h1{font-size:46px;margin:0 0 14px}
+.hero p{max-width:720px;margin:auto;color:#555;font-size:18px}
+.hero .cta{margin-top:28px;display:inline-block;padding:14px 34px;border:2px solid #000;font-weight:700}
+
+/* SEARCH */
+.search-box{max-width:640px;margin:45px auto 10px;display:flex;border:1px solid #ddd}
+.search-box input{flex:1;padding:16px;border:none;font-size:16px}
+.search-box button{background:#000;color:#fff;border:none;padding:16px 26px}
+
+/* FILTER */
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:26px 0}
+.filter-btn{border:1px solid #000;background:#fff;padding:9px 18px;font-weight:600;cursor:pointer}
+.filter-btn.active{background:#000;color:#fff}
+
+/* GRID */
+.container{max-width:1200px;margin:auto;padding:36px 20px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{border:1px solid #eee;padding:16px;display:flex;flex-direction:column;transition:.2s}
+.card:hover{border-color:#000}
+.image-box{flex:1;display:flex;justify-content:center;align-items:center;padding:8px}
+.image-box img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.card-title{font-size:14px;font-weight:600;margin-top:8px;text-align:center;color:#333}
+.open-btn{margin-top:12px;padding:11px;border:1px solid #000;font-weight:600;text-align:center;cursor:pointer}
+.open-btn:hover{background:#000;color:#fff}
+
+/* PAGINATION */
+.pagination{display:flex;justify-content:center;gap:10px;margin:30px 0}
+.pagination button{border:1px solid #000;background:#fff;padding:8px 14px;font-weight:600;cursor:pointer}
+.pagination button.active{background:#000;color:#fff}
+
+/* ABOUT */
+.about-section{padding:40px 20px 20px;text-align:center}
+.about-section h2{font-size:32px;margin-bottom:12px}
+.about-section p{max-width:760px;margin:auto;color:#555;font-size:17px}
+
+/* FAQ SECTION */
+.faq-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  margin-top: 40px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  padding: 22px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-answer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #555;
+  line-height: 1.7;
+}
+
+.faq-answer.active {
+  padding: 0 24px 24px;
+  max-height: 500px;
+}
+
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.faq-icon.active {
+  transform: rotate(45deg);
+  color: #000;
+}
+
+.faq-answer ul {
+  margin: 15px 0 15px 20px;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+}
+
+.faq-contact {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+}
+
+.faq-contact a {
+  color: #2c5aa0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.faq-contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer-top{border-top:1px solid #eee;margin-top:60px;padding:48px 20px}
+.footer-wrap{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px}
+.footer-title{font-weight:700;margin-bottom:12px}
+.footer-links a{display:block;margin-bottom:8px;color:#555}
+.social{display:flex;gap:16px;margin-top:12px}
+.social a{
+ border:1px solid #000;
+ border-radius:50%;
+ width:36px;
+ height:36px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:1px solid #eee}
+
+/* ARROW UP */
+#toTop{
+ position:fixed;
+ bottom:24px;
+ right:24px;
+ background:none;
+ border:none;
+ color:#666;
+ font-size:26px;
+ cursor:pointer;
+ display:none;
+ z-index:9999;
+}
+#toTop:hover{color:#000}
+
+/* EDITOR MODAL - CLEAN & RESPONSIVE */
+.editor-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  z-index: 99999;
+}
+
+.editor-container {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; /* Prevent double scrollbars */
+}
+
+.editor-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.editor-header h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.close-editor {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.close-editor:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.editor-main {
+  display: flex;
+  flex: 1;
+  min-height: 0; /* Important for flex scrolling */
+  overflow: hidden; /* Prevent inner scrolling on desktop */
+}
+
+/* Controls Panel - Always Visible */
+.controls-panel {
+  width: 320px;
+  background: #f8f9fa;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden; /* No internal scrolling */
+}
+
+.controls-content {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling within controls on desktop */
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.control-group input,
+.control-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: white;
+}
+
+.control-group input[type="range"] {
+  padding: 10px 0;
+}
+
+.range-value {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  display: block;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+#downloadBtnEditor {
+  background: #2ecc71;
+  color: white;
+}
+
+#downloadBtnEditor:hover {
+  background: #27ae60;
+}
+
+#resetBtnEditor {
+  background: #6c757d;
+  color: white;
+}
+
+#resetBtnEditor:hover {
+  background: #545b62;
+}
+
+/* Canvas Area - Maintains Google Drive Image Aspect Ratio */
+.canvas-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* No internal scrolling */
+}
+
+.canvas-container {
+  position: relative;
+  background: #000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  user-select: none;
+  /* Aspect ratio will be set by JavaScript based on image */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.canvas-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* DRAGGABLE TEXT - Within Image Container */
+.draggable-text {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0,0,0,.45);
+  padding: 8px 12px;
+  border: 2px dashed transparent;
+  transition: border 0.2s;
+  max-width: 100%;
+  word-break: break-word;
+  white-space: pre-wrap;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.draggable-text.dragging {
+  border: 2px dashed #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+}
+
+.draggable-text:active {
+  cursor: grabbing;
+}
+
+/* Drag Hint */
+.drag-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  animation: pulse 2s infinite;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* MOBILE RESPONSIVE - SINGLE SCROLLBAR */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 28px; }
+  .menu { display: none; }
+  .burger { display: block; }
+  .donate-top { display: none; }
+  .hero { padding: 60px 16px 40px; }
+  .about-section { padding: 30px 16px 10px; }
+  .faq-section { padding: 40px 16px; }
+  .search-box { margin: 30px 16px 10px; }
+  .search-box input { padding: 14px; }
+  .search-box button { padding: 14px 20px; }
+  
+  .card { padding: 12px; }
+  .open-btn { padding: 10px; font-size: 13px; }
+  
+  .editor-header { padding: 10px 12px; }
+  .editor-header h1 { font-size: 14px; }
+  
+  /* MOBILE EDITOR - SINGLE SCROLLBAR LAYOUT */
+  .editor-container {
+    overflow-y: auto; /* Single scrollbar for entire editor */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  
+  .editor-main {
+    flex-direction: column;
+    height: auto; /* Allow natural height */
+    min-height: auto;
+    overflow: visible; /* No internal scrolling */
+  }
+  
+  .controls-panel {
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid #ddd;
+    order: 2;
+    flex-shrink: 0;
+    overflow: visible; /* No internal scrolling */
+    height: auto; /* Natural height */
+  }
+  
+  .controls-content {
+    padding: 20px;
+    overflow: visible; /* No internal scrolling */
+    height: auto; /* Natural height */
+  }
+  
+  .canvas-area {
+    order: 1;
+    padding: 20px;
+    flex: none; /* Don't grow, use natural height */
+    height: auto; /* Natural height */
+    min-height: 0;
+    overflow: visible; /* No internal scrolling */
+  }
+  
+  .canvas-container {
+    width: 100% !important; /* Full width on mobile */
+    height: auto !important; /* Height auto on mobile */
+    max-height: none; /* No max height limit */
+    margin-bottom: 0;
+  }
+  
+  .draggable-text {
+    font-size: 28px;
+    padding: 6px 10px;
+  }
+  
+  .drag-hint {
+    font-size: 12px;
+    padding: 10px 16px;
+    max-width: 90%;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+  
+  .faq-answer {
+    padding: 0 20px;
+  }
+  
+  .faq-answer.active {
+    padding: 0 20px 20px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 24px; }
+  .hero p { font-size: 16px; }
+  .hero .cta { padding: 12px 24px; font-size: 14px; }
+  
+  .filters { gap: 8px; }
+  .filter-btn { padding: 8px 12px; font-size: 13px; }
+  
+  .grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+  
+  .draggable-text { font-size: 24px; }
+  
+  .controls-content { padding: 16px; }
+  .control-group { margin-bottom: 16px; }
+  .control-group input, 
+  .control-group select { padding: 8px 10px; }
+  
+  .editor-header { padding: 8px 12px; }
+  
+  .faq-section h2 { font-size: 24px; }
+  .faq-question { font-size: 15px; padding: 16px; }
+}
+
+/* Desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .controls-panel {
+    width: 280px;
+  }
+}
+
+/* Landscape Mode on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .editor-container {
+    overflow-y: auto; /* Still single scrollbar */
+  }
+  
+  .editor-main {
+    flex-direction: column; /* Keep vertical layout for single scrollbar */
+  }
+  
+  .canvas-container {
+    max-height: 60vh; /* Limit height in landscape */
+  }
+}
+
+/* Prevent body scrolling when editor is open */
+body.editor-open {
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">CheDex Free Notepads</div>
+
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#notepads">Templates</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <!-- DONATE TOP - REMOVED SUPPORT, ONLY DONATE -->
+    <div class="donate-top">
+      <a href="https://paypal.me/YOURPAYPAL" target="_blank">
+        <i class="fab fa-paypal"></i> Donate
+      </a>
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+  <a href="#">Home</a>
+  <a href="#notepads" onclick="toggleMenu()">Templates</a>
+  <a href="#categories" onclick="toggleMenu()">Categories</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+
+  <div class="mobile-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="https://paypal.me/YOURPAYPAL" target="_blank">
+      <i class="fab fa-paypal"></i>
+    </a>
+  </div>
+</div>
+
+<section class="hero">
+  <h1>Free Notepad Templates with Text Customization</h1>
+  <p>Add custom text, change colors, and position text on beautiful notepad designs. 100% free online editor.</p>
+  <a class="cta" href="#notepads">Browse Designs</a>
+</section>
+
+<div class="search-box">
+  <input id="search" placeholder="Search notepads...">
+  <button onclick="searchTemplates()">Search</button>
+</div>
+
+<div id="categories" class="filters">
+  <button class="filter-btn active" onclick="filter('all',this)">All</button>
+  <button class="filter-btn" onclick="filter('minimal',this)">Minimal</button>
+  <button class="filter-btn" onclick="filter('kawaii',this)">Kawaii</button>
+  <button class="filter-btn" onclick="filter('floral',this)">Floral</button>
+</div>
+
+<section id="notepads" class="container">
+  <div class="grid" id="grid"></div>
+  <div class="pagination" id="pagination"></div>
+</section>
+
+<section id="about" class="about-section">
+  <h2>About CheDex</h2>
+  <p>CheDex Free Notepads provides clean and minimalist notepad designs that users can fully customize online. Our mission is to provide professional-quality stationery tools that are simple, elegant, and accessible to everyone.</p>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section">
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(0)">
+        <span>Is CheDex Free Notepads really free?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-0">
+        <p>Yes, absolutely! All our notepad templates, the online editor, and downloads are 100% free. There are no hidden fees, subscriptions, or premium tiers. We believe in providing accessible design tools for everyone.</p>
+        <p>You can:</p>
+        <ul>
+          <li>Browse all 3000+ templates without limits</li>
+          <li>Use the editor with all features unlocked</li>
+          <li>Download unlimited customized designs</li>
+          <li>Use designs for personal and commercial projects</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(1)">
+        <span>How do I customize a notepad?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-1">
+        <p>Customizing a notepad is simple and intuitive:</p>
+        <ol>
+          <li><strong>Choose a template:</strong> Browse our collection and click "Open in Editor" on any design</li>
+          <li><strong>Add your text:</strong> Type your desired text in the editor panel</li>
+          <li><strong>Customize appearance:</strong> Change font, size, color, and shadow effects</li>
+          <li><strong>Position text:</strong> Drag and drop your text anywhere on the notepad</li>
+          <li><strong>Upload fonts (optional):</strong> Add your own custom fonts for unique designs</li>
+          <li><strong>Download:</strong> Click the download button to save your customized notepad as PNG</li>
+        </ol>
+        <p><strong>Tip:</strong> All changes happen in real-time. You can see your design update instantly as you make changes.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(2)">
+        <span>Can I use these designs for commercial purposes?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-2">
+        <p>Yes! You can use our notepad designs for both personal and commercial projects, including:</p>
+        <ul>
+          <li><strong>Print products:</strong> Physical notepads, journals, planners</li>
+          <li><strong>Digital products:</strong> E-books, PDF templates, digital planners</li>
+          <li><strong>Marketing materials:</strong> Social media graphics, advertisements</li>
+          <li><strong>Business use:</strong> Corporate stationery, office supplies</li>
+          <li><strong>Educational materials:</strong> Worksheets, lesson plans</li>
+        </ul>
+        <p><strong>Attribution:</strong> While not required, we appreciate attribution when possible. Please do not:</p>
+        <ul>
+          <li>Resell our templates in their original form</li>
+          <li>Claim our templates as your original work</li>
+          <li>Use templates for illegal or harmful purposes</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(3)">
+        <span>What file format are downloads?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-3">
+        <p>All downloads are in <strong>PNG format</strong> with transparent backgrounds. This format is ideal because:</p>
+        <ul>
+          <li><strong>High quality:</strong> Lossless compression preserves all details</li>
+          <li><strong>Transparency:</strong> Perfect for overlaying on different backgrounds</li>
+          <li><strong>Wide compatibility:</strong> Supported by all design software and printers</li>
+          <li><strong>Web friendly:</strong> Optimized for websites and digital use</li>
+        </ul>
+        <p><strong>File specifications:</strong></p>
+        <ul>
+          <li>Resolution: High-quality (varies by template size)</li>
+          <li>Color mode: RGB with transparency support</li>
+          <li>Naming: Files are automatically named with timestamp for uniqueness</li>
+        </ul>
+        <p>You can easily convert PNGs to other formats (JPG, PDF, etc.) using free online tools if needed.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(4)">
+        <span>How do I upload custom fonts?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-4">
+        <p>Our editor supports custom font uploads. Here's how to use this feature:</p>
+        <ol>
+          <li>Open any template in the editor</li>
+          <li>Look for "Upload Custom Font" in the controls panel</li>
+          <li>Click the file input and select your font file</li>
+          <li>Supported formats: <code>.ttf</code>, <code>.otf</code>, <code>.woff</code>, <code>.woff2</code></li>
+          <li>Once uploaded, your font will appear in the font dropdown menu</li>
+          <li>Select it and start using it in your design</li>
+        </ol>
+        <p><strong>Important notes about font uploads:</strong></p>
+        <ul>
+          <li>Fonts are loaded locally in your browser - they're not sent to our servers</li>
+          <li>Uploaded fonts are only available during your current browser session</li>
+          <li>You must have the legal right to use any fonts you upload</li>
+          <li>For commercial projects, ensure you have appropriate font licenses</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(5)">
+        <span>Why aren't images loading properly?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-5">
+        <p>If you're experiencing image loading issues, here are common solutions:</p>
+        <ul>
+          <li><strong>Refresh the page:</strong> Sometimes a simple refresh fixes temporary issues</li>
+          <li><strong>Check your connection:</strong> Ensure you have stable internet access</li>
+          <li><strong>Clear browser cache:</strong> Old cached files might cause problems</li>
+          <li><strong>Try another browser:</strong> Some browsers handle images differently</li>
+          <li><strong>Disable ad blockers:</strong> Occasionally, ad blockers interfere with image loading</li>
+          <li><strong>Check browser permissions:</strong> Ensure images are allowed to load</li>
+        </ul>
+        <p><strong>If images still won't load:</strong> Our system includes automatic fallback images. If Google Drive images fail to load, you'll see elegant placeholder designs that maintain the same aesthetic.</p>
+        <p><strong>Mobile users:</strong> If you're on mobile data, try switching to WiFi as some mobile networks restrict certain image sources.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(6)">
+        <span>Can I request specific notepad designs?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-6">
+        <p>Yes! We welcome design requests and suggestions. Here's how to submit requests:</p>
+        <ul>
+          <li><strong>Email:</strong> Send requests to <a href="mailto:requests@chedexnotepads.com">requests@chedexnotepads.com</a></li>
+          <li><strong>Be specific:</strong> Include details about style, theme, colors, and purpose</li>
+          <li><strong>Examples:</strong> Include reference images or links if possible</li>
+          <li><strong>Priority:</strong> Popular requests are prioritized in our design schedule</li>
+        </ul>
+        <p><strong>Types of requests we typically fulfill:</strong></p>
+        <ul>
+          <li>Specific themes (seasons, holidays, occasions)</li>
+          <li>Professional/business templates</li>
+          <li>Educational or specialized layouts</li>
+          <li>Popular aesthetic styles</li>
+        </ul>
+        <p><strong>Note:</strong> While we can't fulfill every individual request, we regularly add new designs based on user feedback and trends.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(7)">
+        <span>How can I support CheDex Free Notepads?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-7">
+        <p>There are several ways to support our project and help us continue providing free resources:</p>
+        <ul>
+          <li><strong>Donate:</strong> Use the PayPal donation button to contribute financially</li>
+          <li><strong>Share:</strong> Tell friends, family, and colleagues about our service</li>
+          <li><strong>Social media:</strong> Follow and share our content on social platforms</li>
+          <li><strong>Feedback:</strong> Send us suggestions for improvements</li>
+          <li><strong>Attribution:</strong> Credit us when using our designs in notable projects</li>
+          <li><strong>Report issues:</strong> Help us improve by reporting bugs or problems</li>
+        </ul>
+        <p><strong>Why support us?</strong> Your support helps us:</p>
+        <ul>
+          <li>Create new templates and features</li>
+          <li>Maintain and improve the website</li>
+          <li>Cover hosting and development costs</li>
+          <li>Keep everything free and accessible</li>
+        </ul>
+        <p>Every donation, no matter how small, makes a difference and is greatly appreciated!</p>
+      </div>
+    </div>
+    
+    <div class="faq-contact">
+      <p><strong>Still have questions?</strong> Check our <a href="legal/contact.html">Contact page</a> for more ways to get in touch, or browse our <a href="legal/terms.html">Terms of Service</a> and <a href="legal/privacy.html">Privacy Policy</a> for detailed information.</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer-top">
+  <div class="footer-wrap">
+
+    <div>
+      <div class="footer-title">CheDex</div>
+      Free customizable notepad templates with online editor.
+    </div>
+
+    <div>
+      <div class="footer-title">Quick Links</div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#notepads">Templates</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Legal</div>
+      <div class="footer-links">
+        <a href="legal/terms.html">Terms of Service</a>
+        <a href="legal/privacy.html">Privacy Policy</a>
+        <a href="legal/cookies.html">Cookie Policy</a>
+        <a href="legal/dmca.html">DMCA</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Support</div>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://paypal.me/YOURPAYPAL" target="_blank">
+          <i class="fab fa-paypal"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+© 2026 CheDex Free Notepads · All Rights Reserved
+</footer>
+
+<button id="toTop" onclick="scrollTopSmooth()"><i class="fas fa-arrow-up"></i></button>
+
+<!-- EDITOR MODAL -->
+<div class="editor-modal" id="editorModal">
+  <div class="editor-container">
+    <div class="editor-header">
+      <button class="close-editor" onclick="closeEditor()">✕</button>
+      <h1 id="editorTitle">Customize Notepad</h1>
+    </div>
+
+    <div class="editor-main">
+      <!-- Controls Panel - Always Visible -->
+      <div class="controls-panel">
+        <div class="controls-content">
+          <div class="control-group">
+            <label for="textInputEditor">Text Content</label>
+            <input id="textInputEditor" type="text" value="Your Text" placeholder="Enter your text">
+          </div>
+          
+          <div class="control-group">
+            <label for="fontSelectEditor">Font Style</label>
+            <select id="fontSelectEditor">
+              <option value="Arial">Arial</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Impact">Impact</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Comic Sans MS">Comic Sans</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Tahoma">Tahoma</option>
+            </select>
+          </div>
+          
+          <div class="control-group">
+            <label for="fontUploadEditor">Upload Custom Font</label>
+            <input id="fontUploadEditor" type="file" accept=".ttf,.otf,.woff,.woff2">
+          </div>
+          
+          <div class="control-group">
+            <label for="sizeInputEditor">
+              Font Size: <span id="fontSizeValue">36</span>px
+            </label>
+            <input id="sizeInputEditor" type="range" min="12" max="140" value="36">
+          </div>
+          
+          <div class="control-group">
+            <label for="colorInputEditor">Text Color</label>
+            <input id="colorInputEditor" type="color" value="#ffffff">
+          </div>
+          
+          <div class="control-group">
+            <label for="shadowInputEditor">
+              Shadow: <span id="shadowValue">45</span>%
+            </label>
+            <input id="shadowInputEditor" type="range" min="0" max="100" value="45">
+          </div>
+          
+          <div class="action-buttons">
+            <button id="downloadBtnEditor">
+              <i class="fas fa-download"></i> Download PNG
+            </button>
+            <button id="resetBtnEditor">
+              <i class="fas fa-undo"></i> Reset Position
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Canvas Area -->
+      <div class="canvas-area">
+        <div class="canvas-container" id="canvasContainer">
+          <img id="mainImageEditor" crossorigin="anonymous" alt="Notepad template">
+          <!-- Text is positioned absolutely within canvas-container -->
+        </div>
+        
+        <!-- Drag Hint -->
+        <div class="drag-hint" id="dragHint">
+          <i class="fas fa-arrows-alt"></i><br>
+          Drag text anywhere on the image
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Template Data with ALL your Google Drive images
+const PER_PAGE = 24;
+
+const templates = [
+  {
+    title: "Minimalist Notepad Template", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF"
+  },
+  {
+    title: "Elegant Floral Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1jNVssmcKlX_VmPxQ7x-QU6G_5UsL4M0o"
+  },
+  {
+    title: "Kawaii Cute Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1vdYoR5TEfsY3Z1A07bNgH1SbwlX-CbJl"
+  },
+  {
+    title: "Professional Office Notepad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1lC1ESYcz-Stv1-eHwPdDLsUmA_E38Hvl"
+  },
+  {
+    title: "Spring Flowers Notepad", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1qrm1l1sFGQqw7MyUlCYqwcWR59Y7vHiE"
+  },
+  {
+    title: "Simple Grid Paper", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1pH3GLoeYkiO5XCYVOlkKz7gg-roNWahv"
+  },
+  {
+    title: "Anime Style Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/19i5TcnYTr2mtvPd6F3ZApzkiBBfq834F"
+  },
+  {
+    title: "Botanical Journal", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1YBmwY0CLxhXGQTmLGHJ1Bd3Tbgp6iLGd"
+  },
+  {
+    title: "Modern Minimalist Design", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1mN3SXjGYlWmGK99KwNuOwQy61tntyy7E"
+  },
+  {
+    title: "Pastel Kawaii Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1aIdJelWUO-IiX_Uz9lwZsbDAuYVnbJ30"
+  },
+  {
+    title: "Rose Gold Floral", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1mysdBQbYKA0JkkG2qW-yX-d7ZV1yMIbI"
+  },
+  {
+    title: "Corporate Notepad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1pmE_dbVozw3uZdN6pUjZ27RE9ZhN-gZU"
+  },
+  {
+    title: "Cute Animal Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1-hNMcgKslFnnm3FoL-j5D7_dvs5T8pm9"
+  },
+  {
+    title: "Vintage Floral Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1WXmMWN5gIlqOM1-X8MAVJV1pSNnX8Vnh"
+  },
+  {
+    title: "Lined Paper Template", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/14FagedhzqUvtXGGAMZSNqjbfG-Kwe2P5"
+  },
+  {
+    title: "Hello Kitty Style", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1zIkNMPtZAAESCzP939PPzbmiwGfAFNIK"
+  },
+  {
+    title: "Wildflower Journal", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1PnGA3KJB-ihCRJzq8Ern9126Ip5g_X20"
+  },
+  {
+    title: "Dot Grid Paper", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1zrVUVzB0BRPs94JPumkHaNPcFuClaXNh"
+  },
+  {
+    title: "Chibi Character Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1nsukBoIBt1SgOfZEiwvk_n7hfBNp9lsZ"
+  },
+  {
+    title: "Tropical Floral Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF"
+  }
+];
+
+// Create more templates for demo (using your images in rotation)
+while(templates.length < 3000) {
+  const baseIndex = templates.length % 20;
+  const baseTemplate = templates[baseIndex];
+  const newTemplate = {
+    ...baseTemplate,
+    title: `${baseTemplate.title} ${Math.floor(templates.length / 20) + 1}`,
+  };
+  templates.push(newTemplate);
+}
+
+let currentPage = 1;
+let currentList = templates;
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let textElement = null;
+let hasDraggedOnce = false;
+let originalImageAspectRatio = 1.333; // Default 4:3 aspect ratio
+
+// Template grid rendering
+function render() {
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
+  const start = (currentPage - 1) * PER_PAGE;
+  const end = start + PER_PAGE;
+  
+  currentList.slice(start, end).forEach((t, index) => {
+    grid.innerHTML += `
+    <div class="card">
+      <div class="image-box">
+        <img loading="lazy" src="${t.img}" alt="${t.title}" 
+             onerror="handleImageError(this, '${t.title}')">
+      </div>
+      <div class="card-title">${t.title}</div>
+      <div class="open-btn" onclick="openEditor('${t.img}', '${t.title}')">Open in Editor</div>
+    </div>`;
+  });
+  renderPagination();
+}
+
+function handleImageError(imgElement, title) {
+  console.log('Image failed to load, using fallback:', title);
+  // Use a placeholder image that matches the notepad theme
+  imgElement.src = getNotepadPlaceholder(title);
+  imgElement.alt = title + ' (Preview)';
+}
+
+function getNotepadPlaceholder(title) {
+  // Create an SVG placeholder that looks like a notepad
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+      <rect width="300" height="400" fill="white"/>
+      <rect x="20" y="20" width="260" height="360" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+      ${Array.from({length: 15}, (_, i) => 
+        `<line x1="40" y1="${60 + i * 20}" x2="260" y2="${60 + i * 20}" stroke="#ddd" stroke-width="1"/>`
+      ).join('')}
+      <text x="150" y="250" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">${title}</text>
+      <text x="150" y="280" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Click to customize</text>
+    </svg>`;
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
+function renderPagination() {
+  const pages = Math.ceil(currentList.length / PER_PAGE);
+  const p = document.getElementById("pagination");
+  p.innerHTML = "";
+  
+  // Previous button
+  if (currentPage > 1) {
+    p.innerHTML += `<button onclick="goPage(${currentPage - 1})">← Prev</button>`;
+  }
+  
+  // Page numbers
+  const startPage = Math.max(1, currentPage - 2);
+  const endPage = Math.min(pages, startPage + 4);
+  
+  for (let i = startPage; i <= endPage; i++) {
+    p.innerHTML += `<button onclick="goPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
+  }
+  
+  // Next button
+  if (currentPage < pages) {
+    p.innerHTML += `<button onclick="goPage(${currentPage + 1})">Next →</button>`;
+  }
+}
+
+function goPage(p) {
+  currentPage = p;
+  render();
+  window.scrollTo({top: 600, behavior: 'smooth'});
+}
+
+function filter(cat, btn) {
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  currentPage = 1;
+  currentList = cat === "all" ? templates : templates.filter(t => t.cat === cat);
+  render();
+}
+
+function searchTemplates() {
+  const q = document.getElementById("search").value.toLowerCase();
+  currentPage = 1;
+  currentList = templates.filter(t => t.title.toLowerCase().includes(q));
+  render();
+}
+
+function toggleMenu() {
+  const m = document.getElementById("mobileMenu");
+  m.style.display = m.style.display === "flex" ? "none" : "flex";
+}
+
+// FAQ Functions
+function toggleFAQ(index) {
+  const answer = document.getElementById(`faq-answer-${index}`);
+  const icon = document.querySelectorAll('.faq-icon')[index];
+  
+  if (answer.classList.contains('active')) {
+    answer.classList.remove('active');
+    icon.classList.remove('active');
+    icon.textContent = '+';
+  } else {
+    // Close any other open FAQs
+    document.querySelectorAll('.faq-answer').forEach((faq, i) => {
+      if (i !== index && faq.classList.contains('active')) {
+        faq.classList.remove('active');
+        document.querySelectorAll('.faq-icon')[i].classList.remove('active');
+        document.querySelectorAll('.faq-icon')[i].textContent = '+';
+      }
+    });
+    
+    answer.classList.add('active');
+    icon.classList.add('active');
+    icon.textContent = '−';
+  }
+}
+
+// EDITOR FUNCTIONS - FIXED
+function openEditor(imageUrl, title) {
+  // Reset state
+  hasDraggedOnce = false;
+  isDragging = false;
+  
+  // Set editor title
+  document.getElementById('editorTitle').textContent = `Customize: ${title}`;
+  
+  // Get the image element
+  const img = document.getElementById('mainImageEditor');
+  
+  // IMPORTANT FIX: Use the same image URL that works in the grid
+  // Add cache-busting parameter to prevent caching issues
+  const timestamp = new Date().getTime();
+  const imageUrlWithCache = `${imageUrl}?t=${timestamp}`;
+  
+  // Set the image source
+  img.src = imageUrlWithCache;
+  img.alt = title;
+  
+  // Show editor immediately
+  const editor = document.getElementById('editorModal');
+  editor.style.display = 'block';
+  document.body.classList.add('editor-open'); // Prevent body scrolling
+  
+  // Create or update draggable text element
+  const canvasContainer = document.getElementById('canvasContainer');
+  if (!textElement) {
+    textElement = document.createElement('div');
+    textElement.className = 'draggable-text';
+    textElement.id = 'draggableText';
+    textElement.textContent = title;
+    canvasContainer.appendChild(textElement);
+  } else {
+    textElement.textContent = title;
+    // Reset text position
+    textElement.style.left = '50%';
+    textElement.style.top = '50%';
+    textElement.style.transform = 'translate(-50%, -50%)';
+  }
+  
+  // Reset controls
+  document.getElementById('textInputEditor').value = title;
+  document.getElementById('fontSelectEditor').value = 'Arial';
+  document.getElementById('sizeInputEditor').value = 36;
+  document.getElementById('fontSizeValue').textContent = '36';
+  document.getElementById('colorInputEditor').value = '#ffffff';
+  document.getElementById('shadowInputEditor').value = 45;
+  document.getElementById('shadowValue').textContent = '45';
+  
+  // Update text styles
+  updateTextStyles();
+  
+  // Initialize drag and drop
+  initDragAndDrop();
+  
+  // Show drag hint
+  document.getElementById('dragHint').style.display = 'block';
+  
+  // Set up image load handler
+  img.onload = function() {
+    console.log('Editor image loaded successfully:', imageUrl);
+    
+    // Get the original image dimensions
+    if (img.naturalWidth && img.naturalHeight) {
+      originalImageAspectRatio = img.naturalWidth / img.naturalHeight;
+    } else {
+      originalImageAspectRatio = 1.333; // Default 4:3
+    }
+    
+    // Adjust container size to match image aspect ratio
+    adjustContainerSize();
+    
+    // Center text on image
+    centerTextOnImage();
+    
+    // Hide drag hint after a few seconds
+    setTimeout(() => {
+      document.getElementById('dragHint').style.display = 'none';
+    }, 3000);
+    
+    // Scroll to top of editor on mobile
+    if (window.innerWidth <= 768) {
+      const editorContainer = document.querySelector('.editor-container');
+      editorContainer.scrollTop = 0;
+    }
+  };
+  
+  // Set up image error handler
+  img.onerror = function() {
+    console.error('Failed to load editor image:', imageUrl);
+    
+    // Use a fallback placeholder image
+    img.src = getEditorPlaceholder(title);
+    img.onload(); // Trigger load event with placeholder
+  };
+  
+  // If image is already loaded (cached), trigger load event
+  if (img.complete) {
+    img.onload();
+  }
+  
+  // Set up resize listener
+  window.addEventListener('resize', adjustContainerSize);
+}
+
+function getEditorPlaceholder(title) {
+  // Create a larger SVG placeholder for editor
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+      <rect width="800" height="600" fill="white"/>
+      <rect x="40" y="40" width="720" height="520" fill="#f5f5f5" stroke="#ddd" stroke-width="2"/>
+      ${Array.from({length: 20}, (_, i) => 
+        `<line x1="80" y1="${80 + i * 20}" x2="720" y2="${80 + i * 20}" stroke="#ddd" stroke-width="1"/>`
+      ).join('')}
+      <text x="400" y="300" font-family="Arial" font-size="32" fill="#333" text-anchor="middle">${title}</text>
+      <text x="400" y="340" font-family="Arial" font-size="18" fill="#666" text-anchor="middle">Customize text using controls on the right</text>
+    </svg>`;
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
+function closeEditor() {
+  document.getElementById('editorModal').style.display = 'none';
+  document.body.classList.remove('editor-open');
+  window.removeEventListener('resize', adjustContainerSize);
+}
+
+function adjustContainerSize() {
+  const container = document.getElementById('canvasContainer');
+  const canvasArea = document.querySelector('.canvas-area');
+  const isMobile = window.innerWidth <= 768;
+  
+  if (!container || !originalImageAspectRatio) return;
+  
+  if (isMobile) {
+    // On mobile: Use full width, calculate height based on aspect ratio
+    const maxWidth = canvasArea.clientWidth - 40; // Account for padding
+    const calculatedHeight = maxWidth / originalImageAspectRatio;
+    
+    // Set container size
+    container.style.width = maxWidth + 'px';
+    container.style.height = calculatedHeight + 'px';
+  } else {
+    // On desktop: Fit within available space while maintaining aspect ratio
+    const maxWidth = canvasArea.clientWidth - 40;
+    const maxHeight = canvasArea.clientHeight - 40;
+    
+    let width = maxWidth;
+    let height = width / originalImageAspectRatio;
+    
+    // If too tall, adjust based on height
+    if (height > maxHeight) {
+      height = maxHeight;
+      width = height * originalImageAspectRatio;
+    }
+    
+    // Set container size
+    container.style.width = width + 'px';
+    container.style.height = height + 'px';
+  }
+  
+  // Update text position if it exists
+  if (textElement) {
+    const containerRect = container.getBoundingClientRect();
+    const textRect = textElement.getBoundingClientRect();
+    
+    // Ensure text stays within new container bounds
+    const currentLeft = parseFloat(textElement.style.left) || 0;
+    const currentTop = parseFloat(textElement.style.top) || 0;
+    
+    const maxX = containerRect.width - textRect.width;
+    const maxY = containerRect.height - textRect.height;
+    
+    if (currentLeft > maxX) {
+      textElement.style.left = Math.max(0, maxX) + 'px';
+    }
+    if (currentTop > maxY) {
+      textElement.style.top = Math.max(0, maxY) + 'px';
+    }
+  }
+}
+
+function centerTextOnImage() {
+  if (!textElement) return;
+  
+  const container = document.getElementById('canvasContainer');
+  const containerRect = container.getBoundingClientRect();
+  const textRect = textElement.getBoundingClientRect();
+  
+  // Center text within container
+  const centerX = (containerRect.width - textRect.width) / 2;
+  const centerY = (containerRect.height - textRect.height) / 2;
+  
+  textElement.style.left = centerX + 'px';
+  textElement.style.top = centerY + 'px';
+  textElement.style.transform = 'none';
+}
+
+function initDragAndDrop() {
+  if (!textElement) return;
+  
+  // Clear existing event listeners
+  textElement.onmousedown = null;
+  textElement.ontouchstart = null;
+  document.onmousemove = null;
+  document.ontouchmove = null;
+  document.onmouseup = null;
+  document.ontouchend = null;
+  
+  // Mouse down - start dragging
+  textElement.onmousedown = function(e) {
+    startDrag(e.clientX, e.clientY);
+    e.preventDefault();
+    e.stopPropagation();
+  };
+  
+  // Touch start - for mobile
+  textElement.ontouchstart = function(e) {
+    if (e.touches.length === 1) {
+      const touch = e.touches[0];
+      startDrag(touch.clientX, touch.clientY);
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
+  
+  // Mouse move - update position while dragging
+  document.onmousemove = function(e) {
+    if (isDragging) {
+      updateDrag(e.clientX, e.clientY);
+      e.preventDefault();
+    }
+  };
+  
+  // Touch move - for mobile
+  document.ontouchmove = function(e) {
+    if (isDragging && e.touches.length === 1) {
+      const touch = e.touches[0];
+      updateDrag(touch.clientX, touch.clientY);
+      e.preventDefault();
+    }
+  };
+  
+  // End dragging
+  document.onmouseup = endDrag;
+  document.ontouchend = endDrag;
+}
+
+function startDrag(clientX, clientY) {
+  isDragging = true;
+  textElement.classList.add('dragging');
+  
+  // Get initial positions relative to container
+  const container = document.getElementById('canvasContainer');
+  const containerRect = container.getBoundingClientRect();
+  const textRect = textElement.getBoundingClientRect();
+  
+  dragStartX = clientX - containerRect.left - (parseFloat(textElement.style.left) || 0);
+  dragStartY = clientY - containerRect.top - (parseFloat(textElement.style.top) || 0);
+  
+  // Hide drag hint on first drag
+  if (!hasDraggedOnce) {
+    document.getElementById('dragHint').style.display = 'none';
+    hasDraggedOnce = true;
+  }
+}
+
+function updateDrag(clientX, clientY) {
+  if (!isDragging || !textElement) return;
+  
+  const container = document.getElementById('canvasContainer');
+  const containerRect = container.getBoundingClientRect();
+  const textRect = textElement.getBoundingClientRect();
+  
+  // Calculate new position relative to container
+  let newX = clientX - containerRect.left - dragStartX;
+  let newY = clientY - containerRect.top - dragStartY;
+  
+  // Constrain within container bounds
+  const maxX = containerRect.width - textRect.width;
+  const maxY = containerRect.height - textRect.height;
+  
+  newX = Math.max(0, Math.min(newX, maxX));
+  newY = Math.max(0, Math.min(newY, maxY));
+  
+  // Apply new position
+  textElement.style.left = newX + 'px';
+  textElement.style.top = newY + 'px';
+  textElement.style.transform = 'none';
+}
+
+function endDrag() {
+  if (isDragging) {
+    isDragging = false;
+    textElement.classList.remove('dragging');
+  }
+}
+
+// Update text styles based on controls
+function updateTextStyles() {
+  if (!textElement) return;
+  
+  const fontSize = document.getElementById('sizeInputEditor').value;
+  const fontFamily = document.getElementById('fontSelectEditor').value;
+  const color = document.getElementById('colorInputEditor').value;
+  const shadow = document.getElementById('shadowInputEditor').value;
+  
+  // Update display values
+  document.getElementById('fontSizeValue').textContent = fontSize;
+  document.getElementById('shadowValue').textContent = shadow;
+  
+  // Apply styles
+  textElement.style.fontSize = fontSize + 'px';
+  textElement.style.fontFamily = fontFamily;
+  textElement.style.color = color;
+  textElement.style.textShadow = `0 ${shadow/10}px ${shadow/4}px rgba(0,0,0,${shadow/100})`;
+  
+  // Update text content if input changed
+  const textInput = document.getElementById('textInputEditor');
+  if (textInput.value !== textElement.textContent) {
+    textElement.textContent = textInput.value;
+  }
+}
+
+// Reset text position to center
+function resetTextPosition() {
+  centerTextOnImage();
+}
+
+// Download functionality
+function downloadImage() {
+  if (!textElement) return;
+  
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const img = document.getElementById('mainImageEditor');
+  
+  const download = function() {
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    
+    // Draw image
+    ctx.drawImage(img, 0, 0);
+    
+    // Get text position relative to container
+    const textRect = textElement.getBoundingClientRect();
+    const container = document.getElementById('canvasContainer');
+    const containerRect = container.getBoundingClientRect();
+    
+    // Calculate scaling
+    const scaleX = img.naturalWidth / containerRect.width;
+    const scaleY = img.naturalHeight / containerRect.height;
+    
+    // Calculate text position on canvas
+    const x = (textRect.left - containerRect.left) * scaleX;
+    const y = (textRect.top - containerRect.top) * scaleY;
+    const fontSize = parseFloat(getComputedStyle(textElement).fontSize) * scaleY;
+    
+    // Set text style
+    ctx.font = `${fontSize}px ${getComputedStyle(textElement).fontFamily}`;
+    ctx.fillStyle = getComputedStyle(textElement).color;
+    
+    // Apply shadow
+    const shadow = document.getElementById('shadowInputEditor').value;
+    if (shadow > 0) {
+      ctx.shadowColor = `rgba(0,0,0,${shadow/100})`;
+      ctx.shadowBlur = (shadow/4) * scaleY;
+      ctx.shadowOffsetY = (shadow/10) * scaleY;
+    }
+    
+    // Draw text
+    ctx.fillText(textElement.textContent, x, y + fontSize);
+    
+    // Create download link
+    const link = document.createElement('a');
+    link.download = `custom-notepad-${Date.now()}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  };
+  
+  if (img.complete) {
+    download();
+  } else {
+    img.onload = download;
+  }
+}
+
+// Custom font upload
+function handleFontUpload() {
+  const fileInput = document.getElementById('fontUploadEditor');
+  const file = fileInput.files[0];
+  
+  if (!file) return;
+  
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const fontData = e.target.result;
+    const fontName = file.name.replace(/\.[^/.]+$/, "");
+    
+    // Create font face
+    const font = new FontFace(fontName, `url(${fontData})`);
+    
+    font.load().then(function(loadedFont) {
+      // Add font to document
+      document.fonts.add(loadedFont);
+      
+      // Add font to select options
+      const select = document.getElementById('fontSelectEditor');
+      const option = document.createElement('option');
+      option.value = fontName;
+      option.textContent = fontName + ' (custom)';
+      select.appendChild(option);
+      
+      // Select the new font
+      select.value = fontName;
+      updateTextStyles();
+      
+      alert(`Font "${fontName}" loaded successfully!`);
+    }).catch(function(error) {
+      console.error('Font loading failed:', error);
+      alert('Failed to load font. Please make sure it\'s a valid font file.');
+    });
+  };
+  
+  reader.readAsDataURL(file);
+}
+
+// Initialize event listeners
+function initEditorControls() {
+  // Text input
+  document.getElementById('textInputEditor').addEventListener('input', updateTextStyles);
+  
+  // Font select
+  document.getElementById('fontSelectEditor').addEventListener('change', updateTextStyles);
+  
+  // Font size
+  document.getElementById('sizeInputEditor').addEventListener('input', updateTextStyles);
+  
+  // Color
+  document.getElementById('colorInputEditor').addEventListener('input', updateTextStyles);
+  
+  // Shadow
+  document.getElementById('shadowInputEditor').addEventListener('input', updateTextStyles);
+  
+  // Font upload
+  document.getElementById('fontUploadEditor').addEventListener('change', handleFontUpload);
+  
+  // Download button
+  document.getElementById('downloadBtnEditor').addEventListener('click', downloadImage);
+  
+  // Reset button
+  document.getElementById('resetBtnEditor').addEventListener('click', resetTextPosition);
+  
+  // Close editor when clicking outside (on dark background)
+  document.getElementById('editorModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeEditor();
+    }
+  });
+}
+
+// Top arrow functionality
+window.addEventListener("scroll", () => {
+  document.getElementById("toTop").style.display = window.scrollY > 500 ? "block" : "none";
+});
+
+function scrollTopSmooth() {
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+// IMAGE PROTECTION - Disable right-click, drag, and long press
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+    return false;
+  }
+});
+
+document.addEventListener('dragstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// Prevent image download on mobile (touch and hold)
+document.addEventListener('touchstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+    // Show a message if they try to long-press
+    setTimeout(() => {
+      if (e.target.tagName === 'IMG') {
+        alert('Use the editor to customize and download notepad designs.');
+      }
+    }, 1000);
+  }
+}, { passive: false });
+
+// Initialize everything when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  render();
+  initEditorControls();
+  
+  // Add keyboard shortcuts for editor
+  document.addEventListener('keydown', function(e) {
+    const editorOpen = document.getElementById('editorModal').style.display === 'block';
+    if (editorOpen) {
+      if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        downloadImage();
+      }
+      if (e.key === 'Escape') {
+        closeEditor();
+      }
+      if (e.key === 'r' && e.ctrlKey) {
+        e.preventDefault();
+        resetTextPosition();
+      }
+    }
+  });
+  
+  // Open first FAQ by default
+  setTimeout(() => toggleFAQ(0), 500);
+});
+</script>
+
+</body>
+</html>
