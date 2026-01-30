@@ -1,351 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap - CheDex Free Notepads</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-        }
-        
-        body {
-            background: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        header {
-            background: #fff;
-            border-bottom: 1px solid #eaeaea;
-            padding: 20px 0;
-            margin-bottom: 40px;
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #000;
-            text-decoration: none;
-        }
-        
-        .back-btn {
-            color: #666;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .back-btn:hover {
-            color: #000;
-        }
-        
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #000;
-        }
-        
-        .description {
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 16px;
-        }
-        
-        .content-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 50px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 40px;
-        }
-        
-        .sitemap-section {
-            margin-bottom: 40px;
-        }
-        
-        .sitemap-section:last-child {
-            margin-bottom: 0;
-        }
-        
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #000;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        h3 {
-            font-size: 18px;
-            margin: 25px 0 15px;
-            color: #333;
-        }
-        
-        .sitemap-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .sitemap-list li {
-            margin-bottom: 12px;
-            padding-left: 24px;
-            position: relative;
-        }
-        
-        .sitemap-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #4f46e5;
-        }
-        
-        .sitemap-list a {
-            color: #2c5aa0;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .sitemap-list a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-        
-        .sitemap-list .external {
-            color: #666;
-        }
-        
-        .sub-list {
-            list-style: none;
-            margin: 10px 0 15px 20px;
-            padding: 0;
-        }
-        
-        .sub-list li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .sub-list li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #666;
-        }
-        
-        .sub-list a {
-            color: #555;
-            font-weight: normal;
-        }
-        
-        .xml-sitemap {
-            background: #f0f7ff;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 30px 0;
-        }
-        
-        .update-info {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid #eee;
-            margin-top: 60px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-links a {
-            color: #666;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: #000;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 28px;
-            }
-            
-            .content-card {
-                padding: 25px;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <a href="../index.html" class="logo">CheDex Free Notepads</a>
-            <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        </div>
-    </header>
-    
-    <div class="container">
-        <h1>Website Sitemap</h1>
-        <p class="description">Complete overview of all pages and content available on CheDex Free Notepads</p>
-        
-        <div class="content-card">
-            <div class="update-info">
-                Last Updated: January 26, 2026 | This sitemap is manually maintained and updated regularly.
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-home"></i> Main Pages</h2>
-                <ul class="sitemap-list">
-                    <li><a href="../index.html"><i class="fas fa-house"></i> Home Page</a> - Main landing page with template browser</li>
-                    <li><a href="../index.html#notepads"><i class="fas fa-th-large"></i> Template Gallery</a> - Browse all notepad templates</li>
-                    <li><a href="../index.html#categories"><i class="fas fa-tags"></i> Categories</a> - Filter templates by category</li>
-                    <li><a href="../index.html#about"><i class="fas fa-info-circle"></i> About Section</a> - Information about our service</li>
-                </ul>
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-gavel"></i> Legal & Policy Pages</h2>
-                <ul class="sitemap-list">
-                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a> - User agreement and rules</li>
-                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a> - Data protection information</li>
-                    <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i> Cookie Policy</a> - Cookie usage information</li>
-                    <li><a href="dmca.html"><i class="fas fa-copyright"></i> DMCA Policy</a> - Copyright infringement procedures</li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a> - How to get in touch with us</li>
-                    <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a> - This page (current)</li>
-                </ul>
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-palette"></i> Template Categories</h2>
-                <h3>Browse templates by category:</h3>
-                <ul class="sitemap-list">
-                    <li><a href="../index.html?category=all"><i class="fas fa-border-all"></i> All Templates</a> - Complete collection (3000+ templates)
-                        <ul class="sub-list">
-                            <li><a href="../index.html?page=1">Page 1</a></li>
-                            <li><a href="../index.html?page=2">Page 2</a></li>
-                            <li><a href="../index.html?page=3">Page 3</a></li>
-                            <li><a href="../index.html?page=125">Page 125</a> (and more)</li>
-                        </ul>
-                    </li>
-                    <li><a href="../index.html?category=minimal"><i class="fas fa-minus"></i> Minimal Designs</a> - Clean and simple templates</li>
-                    <li><a href="../index.html?category=floral"><i class="fas fa-leaf"></i> Floral Designs</a> - Nature and flower-themed templates</li>
-                    <li><a href="../index.html?category=kawaii"><i class="fas fa-heart"></i> Kawaii Designs</a> - Cute and adorable templates</li>
-                </ul>
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-tools"></i> Editor Features</h2>
-                <ul class="sitemap-list">
-                    <li><a href="../index.html"><i class="fas fa-edit"></i> Online Notepad Editor</a> - Customization tool
-                        <ul class="sub-list">
-                            <li>Text customization (font, size, color)</li>
-                            <li>Drag-and-drop text positioning</li>
-                            <li>Custom font upload support</li>
-                            <li>Shadow and effects controls</li>
-                            <li>PNG download functionality</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-external-link-alt"></i> External Resources</h2>
-                <ul class="sitemap-list">
-                    <li><a href="https://github.com/chedexstore/chedexstore.github.io" target="_blank" class="external"><i class="fab fa-github"></i> GitHub Repository</a> - Source code</li>
-                    <li><a href="https://pages.github.com" target="_blank" class="external"><i class="fab fa-github-alt"></i> GitHub Pages</a> - Hosting platform</li>
-                    <li><a href="https://fonts.google.com" target="_blank" class="external"><i class="fab fa-google"></i> Google Fonts</a> - Font provider</li>
-                    <li><a href="https://fontawesome.com" target="_blank" class="external"><i class="fab fa-font-awesome"></i> Font Awesome</a> - Icon provider</li>
-                    <li><a href="https://paypal.me/YOURPAYPAL" target="_blank" class="external"><i class="fab fa-paypal"></i> Donate via PayPal</a> - Support our project</li>
-                </ul>
-            </div>
-            
-            <div class="xml-sitemap">
-                <h3><i class="fas fa-code"></i> XML Sitemap</h3>
-                <p>For search engines and automated tools, our XML sitemap is available at:</p>
-                <p><a href="../sitemap.xml">https://chedexstore.github.io/sitemap.xml</a></p>
-                <p><small>The XML sitemap is automatically generated and updated regularly for optimal SEO performance.</small></p>
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-search"></i> Search Functionality</h2>
-                <p>Use the search box on the home page to find templates by keywords:</p>
-                <ul class="sitemap-list">
-                    <li><i class="fas fa-search"></i> <strong>Search Examples:</strong></li>
-                    <li>"minimalist notepad" - Find minimal designs</li>
-                    <li>"floral journal" - Find flower-themed templates</li>
-                    <li>"cute notes" - Find kawaii style templates</li>
-                    <li>"grid paper" - Find grid-based templates</li>
-                    <li>"lined paper" - Find lined notepad templates</li>
-                </ul>
-            </div>
-            
-            <div class="sitemap-section">
-                <h2><i class="fas fa-mobile-alt"></i> Mobile Access</h2>
-                <p>Our website is fully responsive and optimized for:</p>
-                <ul class="sitemap-list">
-                    <li><i class="fas fa-desktop"></i> Desktop computers</li>
-                    <li><i class="fas fa-laptop"></i> Laptops</li>
-                    <li><i class="fas fa-tablet-alt"></i> Tablets</li>
-                    <li><i class="fas fa-mobile-alt"></i> Mobile phones</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <footer>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="cookies.html">Cookie Policy</a>
-            <a href="dmca.html">DMCA</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <p>© 2026 CheDex Free Notepads. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemap.org/schemas/sitemap/0.9
+        http://www.sitemap.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Home Page - Main Landing -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Notepad Templates Section -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/#notepads</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Categories Section -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/#categories</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/#about</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- FAQ Section -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/#faq</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/legal/terms.html</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chedexfreenotepads.github.io/legal/privacy.html</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chedexfreenotepads.github.io/legal/cookies.html</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chedexfreenotepads.github.io/legal/dmca.html</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chedexfreenotepads.github.io/legal/contact.html</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Sitemap Files -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/sitemap.xml</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Robots.txt -->
+  <url>
+    <loc>https://chedexfreenotepads.github.io/robots.txt</loc>
+    <lastmod>2024-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  
+</urlset>
