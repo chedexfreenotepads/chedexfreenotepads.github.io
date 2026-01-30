@@ -1,75 +1,514 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://chedexfreenotepads.github.io/</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/#notepads</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/#categories</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/#about</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/#faq</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/legal/terms.html</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/legal/privacy.html</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/legal/cookies.html</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/legal/dmca.html</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/legal/contact.html</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/sitemap.xml</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://chedexfreenotepads.github.io/robots.txt</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
-  </url>
-</urlset>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map - CheDex Free Notepads</title>
+    <meta name="description" content="Complete site map for CheDex Free Notepads. Browse all pages and templates in our collection.">
+    <link rel="canonical" href="https://chedexfreenotepads.github.io/sitemap.html">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+        
+        body {
+            background: #fff;
+            color: #111;
+            line-height: 1.6;
+            padding: 0;
+        }
+        
+        /* Header matching your main site */
+        .sitemap-header {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            padding: 12px 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            transition: all 0.2s;
+        }
+        
+        .back-home:hover {
+            background: #f8f9fa;
+            color: #000;
+            border-color: #000;
+        }
+        
+        /* Main Content */
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .sitemap-title {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: #000;
+            text-align: center;
+        }
+        
+        .sitemap-description {
+            max-width: 720px;
+            margin: 0 auto 50px;
+            color: #555;
+            font-size: 18px;
+            text-align: center;
+            line-height: 1.7;
+        }
+        
+        /* Site Map Grid */
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .sitemap-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .sitemap-card:hover {
+            border-color: #000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+        
+        .card-icon {
+            font-size: 32px;
+            color: #000;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #000;
+        }
+        
+        .card-description {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .sitemap-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sitemap-links li {
+            margin-bottom: 12px;
+            padding-left: 0;
+            position: relative;
+        }
+        
+        .sitemap-links a {
+            color: #2c5aa0;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            transition: all 0.2s;
+        }
+        
+        .sitemap-links a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        
+        .link-icon {
+            color: #666;
+            font-size: 14px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Technical Section */
+        .technical-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #eaeaea;
+        }
+        
+        .technical-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tech-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .tech-link {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 12px 20px;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        
+        .tech-link:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+        
+        /* Update Info */
+        .update-info {
+            color: #777;
+            font-size: 14px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+        
+        /* Footer matching your main site */
+        .sitemap-footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            margin-top: 60px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sitemap-title {
+                font-size: 32px;
+            }
+            
+            .sitemap-description {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+            
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .sitemap-container {
+                padding: 30px 16px;
+            }
+            
+            .sitemap-card {
+                padding: 24px;
+            }
+            
+            .tech-links {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sitemap-title {
+                font-size: 28px;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .sitemap-card {
+                padding: 20px;
+            }
+            
+            .card-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sitemap-header">
+        <div class="nav-container">
+            <a href="/" class="logo">CheDex Free Notepads</a>
+            <a href="/" class="back-home">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="sitemap-container">
+        <h1 class="sitemap-title">CheDex Free Notepads Site Map</h1>
+        <p class="sitemap-description">
+            Explore all pages and features of our free notepad template service. 
+            Find exactly what you're looking for with our organized site map.
+        </p>
+
+        <!-- Site Map Grid -->
+        <div class="sitemap-grid">
+            <!-- Main Features -->
+            <div class="sitemap-card">
+                <div class="card-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h2 class="card-title">Main Features</h2>
+                <p class="card-description">Core functionality and key sections of our website.</p>
+                <ul class="sitemap-links">
+                    <li>
+                        <a href="/">
+                            <span class="link-icon"><i class="fas fa-home"></i></span>
+                            <span>Home Page</span>
+                            <small style="color: #888; margin-left: auto;">Landing page with editor</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#notepads">
+                            <span class="link-icon"><i class="fas fa-th-large"></i></span>
+                            <span>Template Gallery</span>
+                            <small style="color: #888; margin-left: auto;">3000+ designs</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#categories">
+                            <span class="link-icon"><i class="fas fa-tags"></i></span>
+                            <span>Categories</span>
+                            <small style="color: #888; margin-left: auto;">Minimal, Floral, Kawaii</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#about">
+                            <span class="link-icon"><i class="fas fa-info-circle"></i></span>
+                            <span>About CheDex</span>
+                            <small style="color: #888; margin-left: auto;">Our mission</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Help & Support -->
+            <div class="sitemap-card">
+                <div class="card-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2 class="card-title">Help & Support</h2>
+                <p class="card-description">Get answers to common questions and learn how to use our tools.</p>
+                <ul class="sitemap-links">
+                    <li>
+                        <a href="/#faq">
+                            <span class="link-icon"><i class="fas fa-comments"></i></span>
+                            <span>FAQ Section</span>
+                            <small style="color: #888; margin-left: auto;">Frequently asked questions</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#notepads" onclick="alert('Click any template and use the editor controls to customize text, fonts, colors, and position elements. Then download your design.'); return false;">
+                            <span class="link-icon"><i class="fas fa-edit"></i></span>
+                            <span>How to Use Editor</span>
+                            <small style="color: #888; margin-left: auto;">Customization guide</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="alert('Email: support@chedexnotepads.com\n\nWe typically respond within 24 hours.');">
+                            <span class="link-icon"><i class="fas fa-life-ring"></i></span>
+                            <span>Contact Support</span>
+                            <small style="color: #888; margin-left: auto;">Get help</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Legal & Policies -->
+            <div class="sitemap-card">
+                <div class="card-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2 class="card-title">Legal & Policies</h2>
+                <p class="card-description">Important legal documents and policies for using our service.</p>
+                <ul class="sitemap-links">
+                    <li>
+                        <a href="/legal/terms.html">
+                            <span class="link-icon"><i class="fas fa-file-contract"></i></span>
+                            <span>Terms of Service</span>
+                            <small style="color: #888; margin-left: auto;">Usage terms</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/legal/privacy.html">
+                            <span class="link-icon"><i class="fas fa-shield-alt"></i></span>
+                            <span>Privacy Policy</span>
+                            <small style="color: #888; margin-left: auto;">Data protection</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/legal/cookies.html">
+                            <span class="link-icon"><i class="fas fa-cookie-bite"></i></span>
+                            <span>Cookie Policy</span>
+                            <small style="color: #888; margin-left: auto;">Cookie usage</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/legal/dmca.html">
+                            <span class="link-icon"><i class="fas fa-copyright"></i></span>
+                            <span>DMCA Policy</span>
+                            <small style="color: #888; margin-left: auto;">Copyright</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/legal/contact.html">
+                            <span class="link-icon"><i class="fas fa-envelope"></i></span>
+                            <span>Contact Page</span>
+                            <small style="color: #888; margin-left: auto;">Get in touch</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Files -->
+        <div class="technical-section">
+            <h2 class="technical-title">
+                <i class="fas fa-cogs"></i> Technical Files
+            </h2>
+            <p style="color: #666; margin-bottom: 20px; font-size: 15px;">
+                These files are primarily for search engines and developers.
+            </p>
+            <div class="tech-links">
+                <a href="/sitemap.xml" class="tech-link">
+                    <i class="fas fa-sitemap"></i> XML Sitemap
+                </a>
+                <a href="/robots.txt" class="tech-link">
+                    <i class="fas fa-robot"></i> Robots.txt
+                </a>
+                <a href="https://github.com/chedexfreenotepads" target="_blank" class="tech-link">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+            </div>
+        </div>
+
+        <!-- Update Info -->
+        <div class="update-info">
+            <p><i class="fas fa-history"></i> Last updated: January 2024 | This site map is manually maintained and updated regularly.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="sitemap-footer">
+        <p>© 2024 CheDex Free Notepads · All Rights Reserved</p>
+        <p style="margin-top: 10px; font-size: 13px;">
+            <a href="/" style="color: #777; text-decoration: none;">Home</a> · 
+            <a href="/sitemap.html" style="color: #777; text-decoration: none;">Site Map</a> · 
+            <a href="/legal/terms.html" style="color: #777; text-decoration: none;">Terms</a> · 
+            <a href="/legal/privacy.html" style="color: #777; text-decoration: none;">Privacy</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript for enhanced interactivity -->
+    <script>
+        // Smooth scroll for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event to all internal anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId !== '#') {
+                        const targetElement = document.querySelector(targetId);
+                        if(targetElement) {
+                            e.preventDefault();
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Highlight current card on hover
+            const cards = document.querySelectorAll('.sitemap-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Add animation to page load
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 50);
+        });
+        
+        // Set initial body opacity for fade-in effect
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.3s ease';
+        
+        // Print friendly version
+        function printSitemap() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
