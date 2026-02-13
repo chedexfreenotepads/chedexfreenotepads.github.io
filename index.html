@@ -279,7 +279,7 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden; /* Prevent double scrollbars */
+  overflow: hidden;
 }
 
 .editor-header {
@@ -326,8 +326,8 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
 .editor-main {
   display: flex;
   flex: 1;
-  min-height: 0; /* Important for flex scrolling */
-  overflow: hidden; /* Prevent inner scrolling on desktop */
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* Controls Panel - Always Visible */
@@ -338,13 +338,13 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  overflow: hidden; /* No internal scrolling */
+  overflow: hidden;
 }
 
 .controls-content {
   padding: 20px;
   flex: 1;
-  overflow-y: auto; /* Allow scrolling within controls on desktop */
+  overflow-y: auto;
 }
 
 .control-group {
@@ -427,7 +427,7 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   align-items: center;
   padding: 20px;
   position: relative;
-  overflow: hidden; /* No internal scrolling */
+  overflow: hidden;
 }
 
 .canvas-container {
@@ -435,7 +435,6 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   background: #000;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   user-select: none;
-  /* Aspect ratio will be set by JavaScript based on image */
   max-width: 100%;
   max-height: 100%;
 }
@@ -519,17 +518,16 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   .editor-header { padding: 10px 12px; }
   .editor-header h1 { font-size: 14px; }
   
-  /* MOBILE EDITOR - SINGLE SCROLLBAR LAYOUT */
   .editor-container {
-    overflow-y: auto; /* Single scrollbar for entire editor */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .editor-main {
     flex-direction: column;
-    height: auto; /* Allow natural height */
+    height: auto;
     min-height: auto;
-    overflow: visible; /* No internal scrolling */
+    overflow: visible;
   }
   
   .controls-panel {
@@ -538,29 +536,29 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
     border-top: 1px solid #ddd;
     order: 2;
     flex-shrink: 0;
-    overflow: visible; /* No internal scrolling */
-    height: auto; /* Natural height */
+    overflow: visible;
+    height: auto;
   }
   
   .controls-content {
     padding: 20px;
-    overflow: visible; /* No internal scrolling */
-    height: auto; /* Natural height */
+    overflow: visible;
+    height: auto;
   }
   
   .canvas-area {
     order: 1;
     padding: 20px;
-    flex: none; /* Don't grow, use natural height */
-    height: auto; /* Natural height */
+    flex: none;
+    height: auto;
     min-height: 0;
-    overflow: visible; /* No internal scrolling */
+    overflow: visible;
   }
   
   .canvas-container {
-    width: 100% !important; /* Full width on mobile */
-    height: auto !important; /* Height auto on mobile */
-    max-height: none; /* No max height limit */
+    width: 100% !important;
+    height: auto !important;
+    max-height: none;
     margin-bottom: 0;
   }
   
@@ -628,15 +626,15 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
 /* Landscape Mode on Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .editor-container {
-    overflow-y: auto; /* Still single scrollbar */
+    overflow-y: auto;
   }
   
   .editor-main {
-    flex-direction: column; /* Keep vertical layout for single scrollbar */
+    flex-direction: column;
   }
   
   .canvas-container {
-    max-height: 60vh; /* Limit height in landscape */
+    max-height: 60vh;
   }
 }
 
@@ -660,7 +658,6 @@ body.editor-open {
       <a href="#faq">FAQ</a>
     </div>
 
-    <!-- DONATE TOP - FIXED PAYPAL LINK -->
     <div class="donate-top">
       <a href="https://paypal.me/chedexfreenotepads" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-paypal"></i> Donate
@@ -671,7 +668,6 @@ body.editor-open {
   </div>
 </header>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="close-btn" onclick="toggleMenu()">✕</div>
   <a href="#">Home</a>
@@ -706,6 +702,8 @@ body.editor-open {
   <button class="filter-btn" onclick="filter('minimal',this)">Minimal</button>
   <button class="filter-btn" onclick="filter('kawaii',this)">Kawaii</button>
   <button class="filter-btn" onclick="filter('floral',this)">Floral</button>
+  <button class="filter-btn" onclick="filter('fruits',this)">Fruits</button>
+  <button class="filter-btn" onclick="filter('sky',this)">Sky</button>
 </div>
 
 <section id="notepads" class="container">
@@ -718,7 +716,6 @@ body.editor-open {
   <p>CheDex Free Notepads provides clean and minimalist notepad designs that users can fully customize online. Our mission is to provide professional-quality stationery tools that are simple, elegant, and accessible to everyone.</p>
 </section>
 
-<!-- FAQ SECTION -->
 <section id="faq" class="faq-section">
   <div class="faq-container">
     <h2>Frequently Asked Questions</h2>
@@ -729,14 +726,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-0">
-        <p>Yes, absolutely! All our notepad templates, the online editor, and downloads are 100% free. There are no hidden fees, subscriptions, or premium tiers. We believe in providing accessible design tools for everyone.</p>
-        <p>You can:</p>
-        <ul>
-          <li>Browse all 3000+ templates without limits</li>
-          <li>Use the editor with all features unlocked</li>
-          <li>Download unlimited customized designs</li>
-          <li>Use designs for personal and commercial projects</li>
-        </ul>
+        <p>Yes, absolutely! All our notepad templates, the online editor, and downloads are 100% free.</p>
       </div>
     </div>
     
@@ -746,16 +736,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-1">
-        <p>Customizing a notepad is simple and intuitive:</p>
-        <ol>
-          <li><strong>Choose a template:</strong> Browse our collection and click "Open in Editor" on any design</li>
-          <li><strong>Add your text:</strong> Type your desired text in the editor panel</li>
-          <li><strong>Customize appearance:</strong> Change font, size, color, and shadow effects</li>
-          <li><strong>Position text:</strong> Drag and drop your text anywhere on the notepad</li>
-          <li><strong>Upload fonts (optional):</strong> Add your own custom fonts for unique designs</li>
-          <li><strong>Download:</strong> Click the download button to save your customized notepad as PNG</li>
-        </ol>
-        <p><strong>Tip:</strong> All changes happen in real-time. You can see your design update instantly as you make changes.</p>
+        <p>Click "Open in Editor" on any template, then drag text, change fonts, colors, and download.</p>
       </div>
     </div>
     
@@ -765,20 +746,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-2">
-        <p>Yes! You can use our notepad designs for both personal and commercial projects, including:</p>
-        <ul>
-          <li><strong>Print products:</strong> Physical notepads, journals, planners</li>
-          <li><strong>Digital products:</strong> E-books, PDF templates, digital planners</li>
-          <li><strong>Marketing materials:</strong> Social media graphics, advertisements</li>
-          <li><strong>Business use:</strong> Corporate stationery, office supplies</li>
-          <li><strong>Educational materials:</strong> Worksheets, lesson plans</li>
-        </ul>
-        <p><strong>Attribution:</strong> While not required, we appreciate attribution when possible. Please do not:</p>
-        <ul>
-          <li>Resell our templates in their original form</li>
-          <li>Claim our templates as your original work</li>
-          <li>Use templates for illegal or harmful purposes</li>
-        </ul>
+        <p>Yes! You can use our notepad designs for both personal and commercial projects.</p>
       </div>
     </div>
     
@@ -788,20 +756,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-3">
-        <p>All downloads are in <strong>PNG format</strong> with transparent backgrounds. This format is ideal because:</p>
-        <ul>
-          <li><strong>High quality:</strong> Lossless compression preserves all details</li>
-          <li><strong>Transparency:</strong> Perfect for overlaying on different backgrounds</li>
-          <li><strong>Wide compatibility:</strong> Supported by all design software and printers</li>
-          <li><strong>Web friendly:</strong> Optimized for websites and digital use</li>
-        </ul>
-        <p><strong>File specifications:</strong></p>
-        <ul>
-          <li>Resolution: High-quality (varies by template size)</li>
-          <li>Color mode: RGB with transparency support</li>
-          <li>Naming: Files are automatically named with timestamp for uniqueness</li>
-        </ul>
-        <p>You can easily convert PNGs to other formats (JPG, PDF, etc.) using free online tools if needed.</p>
+        <p>All downloads are in PNG format with high resolution and transparent backgrounds.</p>
       </div>
     </div>
     
@@ -811,22 +766,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-4">
-        <p>Our editor supports custom font uploads. Here's how to use this feature:</p>
-        <ol>
-          <li>Open any template in the editor</li>
-          <li>Look for "Upload Custom Font" in the controls panel</li>
-          <li>Click the file input and select your font file</li>
-          <li>Supported formats: <code>.ttf</code>, <code>.otf</code>, <code>.woff</code>, <code>.woff2</code></li>
-          <li>Once uploaded, your font will appear in the font dropdown menu</li>
-          <li>Select it and start using it in your design</li>
-        </ol>
-        <p><strong>Important notes about font uploads:</strong></p>
-        <ul>
-          <li>Fonts are loaded locally in your browser - they're not sent to our servers</li>
-          <li>Uploaded fonts are only available during your current browser session</li>
-          <li>You must have the legal right to use any fonts you upload</li>
-          <li>For commercial projects, ensure you have appropriate font licenses</li>
-        </ul>
+        <p>Use the "Upload Custom Font" button in the editor to upload TTF, OTF, WOFF, or WOFF2 files.</p>
       </div>
     </div>
     
@@ -836,17 +776,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-5">
-        <p>If you're experiencing image loading issues, here are common solutions:</p>
-        <ul>
-          <li><strong>Refresh the page:</strong> Sometimes a simple refresh fixes temporary issues</li>
-          <li><strong>Check your connection:</strong> Ensure you have stable internet access</li>
-          <li><strong>Clear browser cache:</strong> Old cached files might cause problems</li>
-          <li><strong>Try another browser:</strong> Some browsers handle images differently</li>
-          <li><strong>Disable ad blockers:</strong> Occasionally, ad blockers interfere with image loading</li>
-          <li><strong>Check browser permissions:</strong> Ensure images are allowed to load</li>
-        </ul>
-        <p><strong>If images still won't load:</strong> Our system includes automatic fallback images. If Google Drive images fail to load, you'll see elegant placeholder designs that maintain the same aesthetic.</p>
-        <p><strong>Mobile users:</strong> If you're on mobile data, try switching to WiFi as some mobile networks restrict certain image sources.</p>
+        <p>Try refreshing the page, clearing cache, or switching browsers. We have fallback placeholders.</p>
       </div>
     </div>
     
@@ -856,21 +786,7 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-6">
-        <p>Yes! We welcome design requests and suggestions. Here's how to submit requests:</p>
-        <ul>
-          <li><strong>Email:</strong> Send requests to <a href="mailto:requests@chedexnotepads.com">requests@chedexnotepads.com</a></li>
-          <li><strong>Be specific:</strong> Include details about style, theme, colors, and purpose</li>
-          <li><strong>Examples:</strong> Include reference images or links if possible</li>
-          <li><strong>Priority:</strong> Popular requests are prioritized in our design schedule</li>
-        </ul>
-        <p><strong>Types of requests we typically fulfill:</strong></p>
-        <ul>
-          <li>Specific themes (seasons, holidays, occasions)</li>
-          <li>Professional/business templates</li>
-          <li>Educational or specialized layouts</li>
-          <li>Popular aesthetic styles</li>
-        </ul>
-        <p><strong>Note:</strong> While we can't fulfill every individual request, we regularly add new designs based on user feedback and trends.</p>
+        <p>Yes! Send design requests to requests@chedexnotepads.com</p>
       </div>
     </div>
     
@@ -880,40 +796,22 @@ body.editor-open {
         <span class="faq-icon">+</span>
       </div>
       <div class="faq-answer" id="faq-answer-7">
-        <p>There are several ways to support our project and help us continue providing free resources:</p>
-        <ul>
-          <li><strong>Donate:</strong> Use the PayPal donation button to contribute financially</li>
-          <li><strong>Share:</strong> Tell friends, family, and colleagues about our service</li>
-          <li><strong>Social media:</strong> Follow and share our content on social platforms</li>
-          <li><strong>Feedback:</strong> Send us suggestions for improvements</li>
-          <li><strong>Attribution:</strong> Credit us when using our designs in notable projects</li>
-          <li><strong>Report issues:</strong> Help us improve by reporting bugs or problems</li>
-        </ul>
-        <p><strong>Why support us?</strong> Your support helps us:</p>
-        <ul>
-          <li>Create new templates and features</li>
-          <li>Maintain and improve the website</li>
-          <li>Cover hosting and development costs</li>
-          <li>Keep everything free and accessible</li>
-        </ul>
-        <p>Every donation, no matter how small, makes a difference and is greatly appreciated!</p>
+        <p>Donate via PayPal, share with friends, or follow us on social media!</p>
       </div>
     </div>
     
     <div class="faq-contact">
-      <p><strong>Still have questions?</strong> Check our <a href="/legal/contact.html">Contact page</a> for more ways to get in touch, or browse our <a href="/legal/terms.html">Terms of Service</a> and <a href="/legal/privacy.html">Privacy Policy</a> for detailed information.</p>
+      <p><strong>Still have questions?</strong> Contact us through our social media channels.</p>
     </div>
   </div>
 </section>
 
 <div class="footer-top">
   <div class="footer-wrap">
-
     <div>
       <div class="footer-title">CheDex</div>
       Free customizable notepad templates with online editor.
     </div>
-
     <div>
       <div class="footer-title">Quick Links</div>
       <div class="footer-links">
@@ -924,7 +822,6 @@ body.editor-open {
         <a href="#faq">FAQ</a>
       </div>
     </div>
-
     <div>
       <div class="footer-title">Legal</div>
       <div class="footer-links">
@@ -934,7 +831,6 @@ body.editor-open {
         <a href="/legal/dmca.html">DMCA</a>
       </div>
     </div>
-
     <div>
       <div class="footer-title">Support</div>
       <div class="social">
@@ -946,7 +842,6 @@ body.editor-open {
         </a>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -956,23 +851,19 @@ body.editor-open {
 
 <button id="toTop" onclick="scrollTopSmooth()"><i class="fas fa-arrow-up"></i></button>
 
-<!-- EDITOR MODAL -->
 <div class="editor-modal" id="editorModal">
   <div class="editor-container">
     <div class="editor-header">
       <button class="close-editor" onclick="closeEditor()">✕</button>
       <h1 id="editorTitle">Customize Notepad</h1>
     </div>
-
     <div class="editor-main">
-      <!-- Controls Panel - Always Visible -->
       <div class="controls-panel">
         <div class="controls-content">
           <div class="control-group">
             <label for="textInputEditor">Text Content</label>
             <input id="textInputEditor" type="text" value="Your Text" placeholder="Enter your text">
           </div>
-          
           <div class="control-group">
             <label for="fontSelectEditor">Font Style</label>
             <select id="fontSelectEditor">
@@ -986,31 +877,26 @@ body.editor-open {
               <option value="Tahoma">Tahoma</option>
             </select>
           </div>
-          
           <div class="control-group">
             <label for="fontUploadEditor">Upload Custom Font</label>
             <input id="fontUploadEditor" type="file" accept=".ttf,.otf,.woff,.woff2">
           </div>
-          
           <div class="control-group">
             <label for="sizeInputEditor">
               Font Size: <span id="fontSizeValue">36</span>px
             </label>
             <input id="sizeInputEditor" type="range" min="12" max="140" value="36">
           </div>
-          
           <div class="control-group">
             <label for="colorInputEditor">Text Color</label>
             <input id="colorInputEditor" type="color" value="#ffffff">
           </div>
-          
           <div class="control-group">
             <label for="shadowInputEditor">
               Shadow: <span id="shadowValue">45</span>%
             </label>
             <input id="shadowInputEditor" type="range" min="0" max="100" value="45">
           </div>
-          
           <div class="action-buttons">
             <button id="downloadBtnEditor">
               <i class="fas fa-download"></i> Download PNG
@@ -1021,15 +907,10 @@ body.editor-open {
           </div>
         </div>
       </div>
-      
-      <!-- Canvas Area -->
       <div class="canvas-area">
         <div class="canvas-container" id="canvasContainer">
           <img id="mainImageEditor" crossorigin="anonymous" alt="Notepad template">
-          <!-- Text is positioned absolutely within canvas-container -->
         </div>
-        
-        <!-- Drag Hint -->
         <div class="drag-hint" id="dragHint">
           <i class="fas fa-arrows-alt"></i><br>
           Drag text anywhere on the image
@@ -1040,13 +921,8 @@ body.editor-open {
 </div>
 
 <script>
-// ============================================
-// HIGH-PERFORMANCE IMAGE LOADING SYSTEM
-// ============================================
-
 const PER_PAGE = 24;
 
-// Optimized template data with pre-loaded low-res versions
 const templates = [
   {
     title: "Kawaii Bears, Tulip and Rainbow", 
@@ -1168,7 +1044,6 @@ const templates = [
     img: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF",
     lowRes: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF=w50-h50-p-k"
   },
-  // Newly added templates
   {
     title: "Notebook Template 1", 
     cat: "minimal", 
@@ -1252,26 +1127,224 @@ const templates = [
     cat: "minimal", 
     img: "https://lh3.googleusercontent.com/d/1OMrhC3lViNg21f0In5jWODVxRiSP0vJZ",
     lowRes: "https://lh3.googleusercontent.com/d/1OMrhC3lViNg21f0In5jWODVxRiSP0vJZ=w50-h50-p-k"
+  },
+  {
+    title: "Floral Pattern Notepad", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1bZAW50EGk_aOyb2COQ-YC7IE4tJuzNkQ",
+    lowRes: "https://lh3.googleusercontent.com/d/1bZAW50EGk_aOyb2COQ-YC7IE4tJuzNkQ=w50-h50-p-k"
+  },
+  {
+    title: "Minimalist Grid Design", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1_2dHdaGJBDNTwCpgkH99_FQuxWPWcves",
+    lowRes: "https://lh3.googleusercontent.com/d/1_2dHdaGJBDNTwCpgkH99_FQuxWPWcves=w50-h50-p-k"
+  },
+  {
+    title: "Kawaii Animal Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/14NFIa4umNkRofpwlUn8GDckI_k1z7M4r",
+    lowRes: "https://lh3.googleusercontent.com/d/14NFIa4umNkRofpwlUn8GDckI_k1z7M4r=w50-h50-p-k"
+  },
+  {
+    title: "Elegant Writing Paper", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1JC-2JrsVdSvcqVHpKx_4Ye5mdE5W95lY",
+    lowRes: "https://lh3.googleusercontent.com/d/1JC-2JrsVdSvcqVHpKx_4Ye5mdE5W95lY=w50-h50-p-k"
+  },
+  {
+    title: "Spring Flowers Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1j3xu3Wu7Bvohr_PsRFKX-l-4kXBKdSae",
+    lowRes: "https://lh3.googleusercontent.com/d/1j3xu3Wu7Bvohr_PsRFKX-l-4kXBKdSae=w50-h50-p-k"
+  },
+  {
+    title: "Professional Meeting Notes", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1EhZd8TUTKqMFmrsSqYOhAtnwP6dr68Kc",
+    lowRes: "https://lh3.googleusercontent.com/d/1EhZd8TUTKqMFmrsSqYOhAtnwP6dr68Kc=w50-h50-p-k"
+  },
+  {
+    title: "Cute Diary Pages", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1oTXAekBTEFWZ5X-Qn_1eWSyc23JYIUxI",
+    lowRes: "https://lh3.googleusercontent.com/d/1oTXAekBTEFWZ5X-Qn_1eWSyc23JYIUxI=w50-h50-p-k"
+  },
+  {
+    title: "Modern Office Pad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1Md0CnUjT3dkNuiK2bhaDLMHhP8QAW4YT",
+    lowRes: "https://lh3.googleusercontent.com/d/1Md0CnUjT3dkNuiK2bhaDLMHhP8QAW4YT=w50-h50-p-k"
+  },
+  {
+    title: "Botanical Sketches", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1BIrSpLIAFbCIJNYCj9bbN7HVCv41Axjk",
+    lowRes: "https://lh3.googleusercontent.com/d/1BIrSpLIAFbCIJNYCj9bbN7HVCv41Axjk=w50-h50-p-k"
+  },
+  {
+    title: "Simple Note Pages", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1NtTbnGsJ0DjrRNtMBxQgIHaz2iC41oh3",
+    lowRes: "https://lh3.googleusercontent.com/d/1NtTbnGsJ0DjrRNtMBxQgIHaz2iC41oh3=w50-h50-p-k"
+  },
+  {
+    title: "Kawaii Character Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1G9-82SlDxOPQL0rSDa7w6MkgLBEJREK6",
+    lowRes: "https://lh3.googleusercontent.com/d/1G9-82SlDxOPQL0rSDa7w6MkgLBEJREK6=w50-h50-p-k"
+  },
+  {
+    title: "Elegant Floral Border", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1-Z_WmDz5DG4wQEaB-yR1RKVPud3CatFd",
+    lowRes: "https://lh3.googleusercontent.com/d/1-Z_WmDz5DG4wQEaB-yR1RKVPud3CatFd=w50-h50-p-k"
+  },
+  {
+    title: "Minimalist Lines", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/18WtlJUVvo-h0ddNeB968LtyWBKtvmhxI",
+    lowRes: "https://lh3.googleusercontent.com/d/18WtlJUVvo-h0ddNeB968LtyWBKtvmhxI=w50-h50-p-k"
+  },
+  {
+    title: "Cute Sticker Style", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1HQwdVt-CVlbILUhoC_0zOm3cKnQ5XWuT",
+    lowRes: "https://lh3.googleusercontent.com/d/1HQwdVt-CVlbILUhoC_0zOm3cKnQ5XWuT=w50-h50-p-k"
+  },
+  {
+    title: "Professional Letterhead", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1xQ8XVWElqUd8PWsyuqRGO_9pukgoTrH8",
+    lowRes: "https://lh3.googleusercontent.com/d/1xQ8XVWElqUd8PWsyuqRGO_9pukgoTrH8=w50-h50-p-k"
+  },
+  {
+    title: "Garden Journal", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1gP5hkZ7rrlfi3c5Yj9tnuGwel8iaoiuf",
+    lowRes: "https://lh3.googleusercontent.com/d/1gP5hkZ7rrlfi3c5Yj9tnuGwel8iaoiuf=w50-h50-p-k"
+  },
+  {
+    title: "Simple Checklist Pad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1MaPEughc_EnXpTwgbOKnY_0ZOzhRL0Dl",
+    lowRes: "https://lh3.googleusercontent.com/d/1MaPEughc_EnXpTwgbOKnY_0ZOzhRL0Dl=w50-h50-p-k"
+  },
+  {
+    title: "Kawaii Food Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1f8jgIoBGJDMGMQg4JEzH2-TPO0gGwjlc",
+    lowRes: "https://lh3.googleusercontent.com/d/1f8jgIoBGJDMGMQg4JEzH2-TPO0gGwjlc=w50-h50-p-k"
+  },
+  {
+    title: "Elegant Monogram Design", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1ci6epDJhJuqheE1ZumX1-mLLb-OV1hEP",
+    lowRes: "https://lh3.googleusercontent.com/d/1ci6epDJhJuqheE1ZumX1-mLLb-OV1hEP=w50-h50-p-k"
+  },
+  {
+    title: "Floral Wreath Notepad", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1V-1iGZb-Aw95PqMxPnLsrqCLW1bbA9pE",
+    lowRes: "https://lh3.googleusercontent.com/d/1V-1iGZb-Aw95PqMxPnLsrqCLW1bbA9pE=w50-h50-p-k"
+  },
+  {
+    title: "Modern Grid System", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/16Fjfjk80I81n1MC6lS-iJDyzdx-lUrou",
+    lowRes: "https://lh3.googleusercontent.com/d/16Fjfjk80I81n1MC6lS-iJDyzdx-lUrou=w50-h50-p-k"
+  },
+  {
+    title: "Cute Animal Friends", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1NLXo-w0kgp2tEvRv31ruuz9ddZcShGuT",
+    lowRes: "https://lh3.googleusercontent.com/d/1NLXo-w0kgp2tEvRv31ruuz9ddZcShGuT=w50-h50-p-k"
+  },
+  {
+    title: "Simple Dot Grid", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1-IZJdw9nWCPtH6Y4g-oY7QDHvkKzB38R",
+    lowRes: "https://lh3.googleusercontent.com/d/1-IZJdw9nWCPtH6Y4g-oY7QDHvkKzB38R=w50-h50-p-k"
+  },
+  {
+    title: "Tropical Leaves Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1fzbchg8fb1PuCxi8tuiTtynNm6gUjZdU",
+    lowRes: "https://lh3.googleusercontent.com/d/1fzbchg8fb1PuCxi8tuiTtynNm6gUjZdU=w50-h50-p-k"
+  },
+  {
+    title: "Professional Document Pad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1_uanqwHbmnn2_KBjrGdoqvR6s6RAxp9N",
+    lowRes: "https://lh3.googleusercontent.com/d/1_uanqwHbmnn2_KBjrGdoqvR6s6RAxp9N=w50-h50-p-k"
+  },
+  {
+    title: "Kawaii Fantasy Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1LU58B8VU1ixOjEweYVL3nQS4_WDIxSCh",
+    lowRes: "https://lh3.googleusercontent.com/d/1LU58B8VU1ixOjEweYVL3nQS4_WDIxSCh=w50-h50-p-k"
+  },
+  {
+    title: "Elegant Calligraphy Pad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1nWFXsMe3gonOLlHuse2NO4UgADbOMRQw",
+    lowRes: "https://lh3.googleusercontent.com/d/1nWFXsMe3gonOLlHuse2NO4UgADbOMRQw=w50-h50-p-k"
+  },
+  {
+    title: "Rose Pattern Notepad", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1C7mL825rvQjccVnW5OgiSEJO3N7cLYkK",
+    lowRes: "https://lh3.googleusercontent.com/d/1C7mL825rvQjccVnW5OgiSEJO3N7cLYkK=w50-h50-p-k"
+  },
+  {
+    title: "Minimalist Weekly Planner", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1w4jyXDik25UfLW0BukecHu2eQORKtOjI",
+    lowRes: "https://lh3.googleusercontent.com/d/1w4jyXDik25UfLW0BukecHu2eQORKtOjI=w50-h50-p-k"
+  },
+  {
+    title: "Cute Monster Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1MOIFDn6suXsKwZ0a45X1BXtzYI2xjbiV",
+    lowRes: "https://lh3.googleusercontent.com/d/1MOIFDn6suXsKwZ0a45X1BXtzYI2xjbiV=w50-h50-p-k"
+  },
+  {
+    title: "Simple Lined Paper", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1RZtb-BrPFmsNn4hcz4-K9nyUWmLWPZsN",
+    lowRes: "https://lh3.googleusercontent.com/d/1RZtb-BrPFmsNn4hcz4-K9nyUWmLWPZsN=w50-h50-p-k"
+  },
+  {
+    title: "Floral Corner Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1-JKACyApSIa-isqBr6g0e10KccFKGUpZ",
+    lowRes: "https://lh3.googleusercontent.com/d/1-JKACyApSIa-isqBr6g0e10KccFKGUpZ=w50-h50-p-k"
+  },
+  {
+    title: "Professional Meeting Pad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/11mpDwSfMKj6A6fJTEeZeZszpIDiCE1ie",
+    lowRes: "https://lh3.googleusercontent.com/d/11mpDwSfMKj6A6fJTEeZeZszpIDiCE1ie=w50-h50-p-k"
+  },
+  {
+    title: "Kawaii Space Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1SmK5O6aJaMQk5JrKYtnH-dwwdsOhax4h",
+    lowRes: "https://lh3.googleusercontent.com/d/1SmK5O6aJaMQk5JrKYtnH-dwwdsOhax4h=w50-h50-p-k"
+  },
+  {
+    title: "Elegant Border Design", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1OFb04iIO6FOIRRGsccj24sd6LHCqfRrC",
+    lowRes: "https://lh3.googleusercontent.com/d/1OFb04iIO6FOIRRGsccj24sd6LHCqfRrC=w50-h50-p-k"
+  },
+  {
+    title: "Garden Flowers", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1IqdZiViCyIOGfReNQqafDPWwRRtk7aKK",
+    lowRes: "https://lh3.googleusercontent.com/d/1IqdZiViCyIOGfReNQqafDPWwRRtk7aKK=w50-h50-p-k"
   }
 ];
-
-// Generate more templates efficiently
-const generateTemplates = () => {
-  const totalTemplates = 3000;
-  const baseCount = templates.length;
-  
-  for (let i = baseCount; i < totalTemplates; i++) {
-    const baseIndex = i % baseCount;
-    const baseTemplate = templates[baseIndex];
-    templates.push({
-      ...baseTemplate,
-      title: `${baseTemplate.title} ${Math.floor(i / baseCount) + 1}`,
-    });
-  }
-};
-
-// Generate templates only when needed
-let templatesGenerated = false;
 
 let currentPage = 1;
 let currentList = templates;
@@ -1282,11 +1355,9 @@ let textElement = null;
 let hasDraggedOnce = false;
 let originalImageAspectRatio = 1.333;
 
-// Image cache for instant loading
 const imageCache = new Map();
 const placeholderCache = new Map();
 
-// Initialize Intersection Observer for lazy loading
 let imageObserver;
 const initImageObserver = () => {
   imageObserver = new IntersectionObserver((entries) => {
@@ -1297,54 +1368,44 @@ const initImageObserver = () => {
         const title = img.dataset.title;
         
         if (src) {
-          // Load image with progressive enhancement
           loadImageWithProgressiveEnhancement(img, src, title);
         }
         imageObserver.unobserve(img);
       }
     });
   }, {
-    rootMargin: '100px 0px', // Start loading 100px before image enters viewport
+    rootMargin: '100px 0px',
     threshold: 0.1
   });
 };
 
-// Progressive image loading
 const loadImageWithProgressiveEnhancement = (imgElement, src, title) => {
-  // Check cache first
   if (imageCache.has(src)) {
     imgElement.src = imageCache.get(src);
     imgElement.classList.add('loaded');
     return;
   }
   
-  // Use low-res placeholder while loading
   const lowResSrc = src.includes('=') ? src : `${src}=w50-h50-p-k`;
   
-  // Create temporary image for preloading
   const tempImg = new Image();
   
   tempImg.onload = () => {
-    // First set low-res version for immediate display
     imgElement.src = lowResSrc;
     imgElement.classList.add('loaded');
     
-    // Then load high-res version
     const highResImg = new Image();
     highResImg.onload = () => {
       imgElement.src = src;
-      // Cache the image
       imageCache.set(src, src);
     };
     highResImg.onerror = () => {
-      // Fallback to placeholder if high-res fails
       imgElement.src = getCachedPlaceholder(title);
     };
     highResImg.src = src;
   };
   
   tempImg.onerror = () => {
-    // Use cached placeholder if image fails to load
     imgElement.src = getCachedPlaceholder(title);
     imgElement.classList.add('loaded');
   };
@@ -1352,7 +1413,6 @@ const loadImageWithProgressiveEnhancement = (imgElement, src, title) => {
   tempImg.src = lowResSrc;
 };
 
-// Cache placeholder images
 const getCachedPlaceholder = (title) => {
   if (placeholderCache.has(title)) {
     return placeholderCache.get(title);
@@ -1363,20 +1423,12 @@ const getCachedPlaceholder = (title) => {
   return placeholder;
 };
 
-// Optimized template grid rendering
 function render() {
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
   const start = (currentPage - 1) * PER_PAGE;
   const end = start + PER_PAGE;
   
-  // Generate templates only when needed
-  if (!templatesGenerated && currentPage > 2) {
-    generateTemplates();
-    templatesGenerated = true;
-  }
-  
-  // Create document fragment for better performance
   const fragment = document.createDocumentFragment();
   
   currentList.slice(start, end).forEach((t, index) => {
@@ -1401,7 +1453,6 @@ function render() {
   
   grid.appendChild(fragment);
   
-  // Observe images for lazy loading
   setTimeout(() => {
     const lazyImages = grid.querySelectorAll('.lazy-image');
     lazyImages.forEach(img => {
@@ -1412,22 +1463,7 @@ function render() {
   renderPagination();
 }
 
-// Preload next page images
-const preloadNextPage = () => {
-  const nextPageStart = currentPage * PER_PAGE;
-  const nextPageEnd = nextPageStart + PER_PAGE;
-  
-  currentList.slice(nextPageStart, nextPageEnd).forEach(t => {
-    if (!imageCache.has(t.img)) {
-      const img = new Image();
-      img.src = t.img;
-      imageCache.set(t.img, t.img);
-    }
-  });
-};
-
 function getNotepadPlaceholder(title) {
-  // Check cache first
   if (placeholderCache.has(title)) {
     return placeholderCache.get(title);
   }
@@ -1451,12 +1487,10 @@ function renderPagination() {
   const p = document.getElementById("pagination");
   p.innerHTML = "";
   
-  // Previous button
   if (currentPage > 1) {
     p.innerHTML += `<button onclick="goPage(${currentPage - 1})">← Prev</button>`;
   }
   
-  // Page numbers
   const startPage = Math.max(1, currentPage - 2);
   const endPage = Math.min(pages, startPage + 4);
   
@@ -1464,14 +1498,8 @@ function renderPagination() {
     p.innerHTML += `<button onclick="goPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
   }
   
-  // Next button
   if (currentPage < pages) {
     p.innerHTML += `<button onclick="goPage(${currentPage + 1})">Next →</button>`;
-  }
-  
-  // Preload next page images
-  if (currentPage < pages) {
-    setTimeout(preloadNextPage, 100);
   }
 }
 
@@ -1501,7 +1529,6 @@ function toggleMenu() {
   m.style.display = m.style.display === "flex" ? "none" : "flex";
 }
 
-// FAQ Functions
 function toggleFAQ(index) {
   const answer = document.getElementById(`faq-answer-${index}`);
   const icon = document.querySelectorAll('.faq-icon')[index];
@@ -1511,7 +1538,6 @@ function toggleFAQ(index) {
     icon.classList.remove('active');
     icon.textContent = '+';
   } else {
-    // Close any other open FAQs
     document.querySelectorAll('.faq-answer').forEach((faq, i) => {
       if (i !== index && faq.classList.contains('active')) {
         faq.classList.remove('active');
@@ -1526,34 +1552,26 @@ function toggleFAQ(index) {
   }
 }
 
-// EDITOR FUNCTIONS - OPTIMIZED
 function openEditor(imageUrl, title) {
-  // Reset state
   hasDraggedOnce = false;
   isDragging = false;
   
-  // Set editor title
   document.getElementById('editorTitle').textContent = `Customize: ${title}`;
   
-  // Get the image element
   const img = document.getElementById('mainImageEditor');
   
-  // Use cached image if available
   if (imageCache.has(imageUrl)) {
     img.src = imageCache.get(imageUrl);
     initializeEditor(img, title);
   } else {
-    // Add cache-busting parameter only if needed
     const timestamp = new Date().getTime();
     const imageUrlWithCache = `${imageUrl}?t=${timestamp}`;
     
-    // Set the image source
     img.src = imageUrlWithCache;
     img.alt = title;
     
     initializeEditor(img, title);
     
-    // Cache the image after loading
     img.onload = function() {
       imageCache.set(imageUrl, imageUrl);
       initializeEditor(img, title);
@@ -1565,14 +1583,12 @@ function openEditor(imageUrl, title) {
     };
   }
   
-  // Show editor immediately
   const editor = document.getElementById('editorModal');
   editor.style.display = 'block';
   document.body.classList.add('editor-open');
 }
 
 function initializeEditor(img, title) {
-  // Create or update draggable text element
   const canvasContainer = document.getElementById('canvasContainer');
   if (!textElement) {
     textElement = document.createElement('div');
@@ -1582,13 +1598,11 @@ function initializeEditor(img, title) {
     canvasContainer.appendChild(textElement);
   } else {
     textElement.textContent = title;
-    // Reset text position
     textElement.style.left = '50%';
     textElement.style.top = '50%';
     textElement.style.transform = 'translate(-50%, -50%)';
   }
   
-  // Reset controls
   document.getElementById('textInputEditor').value = title;
   document.getElementById('fontSelectEditor').value = 'Arial';
   document.getElementById('sizeInputEditor').value = 36;
@@ -1597,40 +1611,29 @@ function initializeEditor(img, title) {
   document.getElementById('shadowInputEditor').value = 45;
   document.getElementById('shadowValue').textContent = '45';
   
-  // Update text styles
   updateTextStyles();
-  
-  // Initialize drag and drop
   initDragAndDrop();
   
-  // Show drag hint
   document.getElementById('dragHint').style.display = 'block';
   
-  // Get the original image dimensions
   if (img.naturalWidth && img.naturalHeight) {
     originalImageAspectRatio = img.naturalWidth / img.naturalHeight;
   } else {
     originalImageAspectRatio = 1.333;
   }
   
-  // Adjust container size to match image aspect ratio
   adjustContainerSize();
-  
-  // Center text on image
   centerTextOnImage();
   
-  // Hide drag hint after a few seconds
   setTimeout(() => {
     document.getElementById('dragHint').style.display = 'none';
   }, 2000);
   
-  // Scroll to top of editor on mobile
   if (window.innerWidth <= 768) {
     const editorContainer = document.querySelector('.editor-container');
     editorContainer.scrollTop = 0;
   }
   
-  // Set up resize listener
   window.addEventListener('resize', adjustContainerSize);
 }
 
@@ -1715,7 +1718,6 @@ function centerTextOnImage() {
 function initDragAndDrop() {
   if (!textElement) return;
   
-  // Clear existing event listeners
   textElement.onmousedown = null;
   textElement.ontouchstart = null;
   document.onmousemove = null;
@@ -1912,7 +1914,6 @@ function handleFontUpload() {
   reader.readAsDataURL(file);
 }
 
-// Initialize event listeners
 function initEditorControls() {
   document.getElementById('textInputEditor').addEventListener('input', updateTextStyles);
   document.getElementById('fontSelectEditor').addEventListener('change', updateTextStyles);
@@ -1930,7 +1931,6 @@ function initEditorControls() {
   });
 }
 
-// Top arrow functionality
 window.addEventListener("scroll", () => {
   document.getElementById("toTop").style.display = window.scrollY > 500 ? "block" : "none";
 });
@@ -1939,7 +1939,6 @@ function scrollTopSmooth() {
   window.scrollTo({top: 0, behavior: "smooth"});
 }
 
-// IMAGE PROTECTION - Disable right-click, drag, and long press
 document.addEventListener('contextmenu', function(e) {
   if (e.target.tagName === 'IMG') {
     e.preventDefault();
@@ -1965,18 +1964,11 @@ document.addEventListener('touchstart', function(e) {
   }
 }, { passive: false });
 
-// Initialize everything when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize image observer
   initImageObserver();
-  
-  // Render initial page
   render();
-  
-  // Initialize editor controls
   initEditorControls();
   
-  // Preload first few images for instant display
   setTimeout(() => {
     templates.slice(0, 8).forEach(t => {
       if (!imageCache.has(t.img)) {
@@ -1987,7 +1979,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, 100);
   
-  // Add keyboard shortcuts for editor
   document.addEventListener('keydown', function(e) {
     const editorOpen = document.getElementById('editorModal').style.display === 'block';
     if (editorOpen) {
@@ -2005,7 +1996,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Open first FAQ by default
   setTimeout(() => toggleFAQ(0), 500);
 });
 </script>
