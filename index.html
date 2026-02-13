@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="TVqqKXMitk0GFKzZkx7Q0WXh2mzDx900pwvUq9YjCwM" />
 
 <title>CheDex Free Notepads | Free Custom Notepad Editor Templates</title>
 
@@ -11,6 +12,7 @@
 <meta name="author" content="CheDex Free Notepads">
 
 <link rel="canonical" href="https://chedexstore.github.io/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -35,8 +37,7 @@ header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-inde
  padding:6px 12px;
  border-radius:20px;
  font-size:12px;
- font-weight:700;
-}
+ font-weight:700}
 .donate-top a:hover{background:#000;color:#fff}
 
 /* BURGER */
@@ -53,8 +54,7 @@ header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-inde
  align-items:center;
  justify-content:center;
  gap:24px;
- z-index:9999;
-}
+ z-index:9999}
 .mobile-menu a{font-size:22px;font-weight:700}
 .close-btn{position:absolute;top:22px;right:22px;font-size:30px;cursor:pointer}
 .mobile-social{display:flex;gap:16px;margin-top:20px}
@@ -65,8 +65,7 @@ header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-inde
  height:38px;
  display:flex;
  align-items:center;
- justify-content:center;
-}
+ justify-content:center}
 
 /* HERO */
 .hero{padding:90px 20px 70px;text-align:center}
@@ -89,11 +88,35 @@ header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-inde
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
 .card{border:1px solid #eee;padding:16px;display:flex;flex-direction:column;transition:.2s}
 .card:hover{border-color:#000}
-.image-box{flex:1;display:flex;justify-content:center;align-items:center;padding:8px}
-.image-box img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.image-box{flex:1;display:flex;justify-content:center;align-items:center;padding:8px;min-height:200px;background:#f8f9fa;border-radius:4px;}
+.image-box img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none;transition:opacity 0.3s ease;}
 .card-title{font-size:14px;font-weight:600;margin-top:8px;text-align:center;color:#333}
 .open-btn{margin-top:12px;padding:11px;border:1px solid #000;font-weight:600;text-align:center;cursor:pointer}
 .open-btn:hover{background:#000;color:#fff}
+
+/* LAZY LOADING */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+.lazy-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes loading {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
 
 /* PAGINATION */
 .pagination{display:flex;justify-content:center;gap:10px;margin:30px 0}
@@ -104,6 +127,106 @@ header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-inde
 .about-section{padding:40px 20px 20px;text-align:center}
 .about-section h2{font-size:32px;margin-bottom:12px}
 .about-section p{max-width:760px;margin:auto;color:#555;font-size:17px}
+
+/* FAQ SECTION */
+.faq-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  margin-top: 40px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  padding: 22px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-answer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #555;
+  line-height: 1.7;
+}
+
+.faq-answer.active {
+  padding: 0 24px 24px;
+  max-height: 500px;
+}
+
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.faq-icon.active {
+  transform: rotate(45deg);
+  color: #000;
+}
+
+.faq-answer ul {
+  margin: 15px 0 15px 20px;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+}
+
+.faq-contact {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+}
+
+.faq-contact a {
+  color: #2c5aa0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.faq-contact a:hover {
+  text-decoration: underline;
+}
 
 /* FOOTER */
 .footer-top{border-top:1px solid #eee;margin-top:60px;padding:48px 20px}
@@ -118,8 +241,7 @@ header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-inde
  height:36px;
  display:flex;
  align-items:center;
- justify-content:center;
-}
+ justify-content:center}
 
 footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:1px solid #eee}
 
@@ -134,8 +256,7 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
  font-size:26px;
  cursor:pointer;
  display:none;
- z-index:9999;
-}
+ z-index:9999}
 #toTop:hover{color:#000}
 
 /* EDITOR MODAL - CLEAN & RESPONSIVE */
@@ -386,11 +507,13 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   .donate-top { display: none; }
   .hero { padding: 60px 16px 40px; }
   .about-section { padding: 30px 16px 10px; }
+  .faq-section { padding: 40px 16px; }
   .search-box { margin: 30px 16px 10px; }
   .search-box input { padding: 14px; }
   .search-box button { padding: 14px 20px; }
   
   .card { padding: 12px; }
+  .image-box { min-height: 160px; }
   .open-btn { padding: 10px; font-size: 13px; }
   
   .editor-header { padding: 10px 12px; }
@@ -455,6 +578,19 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   .action-buttons {
     flex-direction: column;
   }
+  
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+  
+  .faq-answer {
+    padding: 0 20px;
+  }
+  
+  .faq-answer.active {
+    padding: 0 20px 20px;
+  }
 }
 
 /* Small Phones */
@@ -467,6 +603,7 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   .filter-btn { padding: 8px 12px; font-size: 13px; }
   
   .grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+  .image-box { min-height: 140px; }
   
   .draggable-text { font-size: 24px; }
   
@@ -476,6 +613,9 @@ footer{text-align:center;padding:22px 16px;color:#777;font-size:14px;border-top:
   .control-group select { padding: 8px 10px; }
   
   .editor-header { padding: 8px 12px; }
+  
+  .faq-section h2 { font-size: 24px; }
+  .faq-question { font-size: 15px; padding: 16px; }
 }
 
 /* Desktop */
@@ -517,12 +657,12 @@ body.editor-open {
       <a href="#notepads">Templates</a>
       <a href="#categories">Categories</a>
       <a href="#about">About</a>
-      <a href="#">Contact</a>
+      <a href="#faq">FAQ</a>
     </div>
 
-    <!-- DONATE TOP - REMOVED SUPPORT, ONLY DONATE -->
+    <!-- DONATE TOP - FIXED PAYPAL LINK -->
     <div class="donate-top">
-      <a href="https://paypal.me/YOURPAYPAL" target="_blank">
+      <a href="https://paypal.me/chedexfreenotepads" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-paypal"></i> Donate
       </a>
     </div>
@@ -538,13 +678,13 @@ body.editor-open {
   <a href="#notepads" onclick="toggleMenu()">Templates</a>
   <a href="#categories" onclick="toggleMenu()">Categories</a>
   <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#">Contact</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
 
   <div class="mobile-social">
     <a href="#"><i class="fab fa-facebook-f"></i></a>
     <a href="#"><i class="fab fa-pinterest-p"></i></a>
     <a href="#"><i class="fab fa-youtube"></i></a>
-    <a href="https://paypal.me/YOURPAYPAL" target="_blank">
+    <a href="https://paypal.me/chedexfreenotepads" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-paypal"></i>
     </a>
   </div>
@@ -578,6 +718,194 @@ body.editor-open {
   <p>CheDex Free Notepads provides clean and minimalist notepad designs that users can fully customize online. Our mission is to provide professional-quality stationery tools that are simple, elegant, and accessible to everyone.</p>
 </section>
 
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section">
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(0)">
+        <span>Is CheDex Free Notepads really free?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-0">
+        <p>Yes, absolutely! All our notepad templates, the online editor, and downloads are 100% free. There are no hidden fees, subscriptions, or premium tiers. We believe in providing accessible design tools for everyone.</p>
+        <p>You can:</p>
+        <ul>
+          <li>Browse all 3000+ templates without limits</li>
+          <li>Use the editor with all features unlocked</li>
+          <li>Download unlimited customized designs</li>
+          <li>Use designs for personal and commercial projects</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(1)">
+        <span>How do I customize a notepad?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-1">
+        <p>Customizing a notepad is simple and intuitive:</p>
+        <ol>
+          <li><strong>Choose a template:</strong> Browse our collection and click "Open in Editor" on any design</li>
+          <li><strong>Add your text:</strong> Type your desired text in the editor panel</li>
+          <li><strong>Customize appearance:</strong> Change font, size, color, and shadow effects</li>
+          <li><strong>Position text:</strong> Drag and drop your text anywhere on the notepad</li>
+          <li><strong>Upload fonts (optional):</strong> Add your own custom fonts for unique designs</li>
+          <li><strong>Download:</strong> Click the download button to save your customized notepad as PNG</li>
+        </ol>
+        <p><strong>Tip:</strong> All changes happen in real-time. You can see your design update instantly as you make changes.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(2)">
+        <span>Can I use these designs for commercial purposes?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-2">
+        <p>Yes! You can use our notepad designs for both personal and commercial projects, including:</p>
+        <ul>
+          <li><strong>Print products:</strong> Physical notepads, journals, planners</li>
+          <li><strong>Digital products:</strong> E-books, PDF templates, digital planners</li>
+          <li><strong>Marketing materials:</strong> Social media graphics, advertisements</li>
+          <li><strong>Business use:</strong> Corporate stationery, office supplies</li>
+          <li><strong>Educational materials:</strong> Worksheets, lesson plans</li>
+        </ul>
+        <p><strong>Attribution:</strong> While not required, we appreciate attribution when possible. Please do not:</p>
+        <ul>
+          <li>Resell our templates in their original form</li>
+          <li>Claim our templates as your original work</li>
+          <li>Use templates for illegal or harmful purposes</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(3)">
+        <span>What file format are downloads?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-3">
+        <p>All downloads are in <strong>PNG format</strong> with transparent backgrounds. This format is ideal because:</p>
+        <ul>
+          <li><strong>High quality:</strong> Lossless compression preserves all details</li>
+          <li><strong>Transparency:</strong> Perfect for overlaying on different backgrounds</li>
+          <li><strong>Wide compatibility:</strong> Supported by all design software and printers</li>
+          <li><strong>Web friendly:</strong> Optimized for websites and digital use</li>
+        </ul>
+        <p><strong>File specifications:</strong></p>
+        <ul>
+          <li>Resolution: High-quality (varies by template size)</li>
+          <li>Color mode: RGB with transparency support</li>
+          <li>Naming: Files are automatically named with timestamp for uniqueness</li>
+        </ul>
+        <p>You can easily convert PNGs to other formats (JPG, PDF, etc.) using free online tools if needed.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(4)">
+        <span>How do I upload custom fonts?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-4">
+        <p>Our editor supports custom font uploads. Here's how to use this feature:</p>
+        <ol>
+          <li>Open any template in the editor</li>
+          <li>Look for "Upload Custom Font" in the controls panel</li>
+          <li>Click the file input and select your font file</li>
+          <li>Supported formats: <code>.ttf</code>, <code>.otf</code>, <code>.woff</code>, <code>.woff2</code></li>
+          <li>Once uploaded, your font will appear in the font dropdown menu</li>
+          <li>Select it and start using it in your design</li>
+        </ol>
+        <p><strong>Important notes about font uploads:</strong></p>
+        <ul>
+          <li>Fonts are loaded locally in your browser - they're not sent to our servers</li>
+          <li>Uploaded fonts are only available during your current browser session</li>
+          <li>You must have the legal right to use any fonts you upload</li>
+          <li>For commercial projects, ensure you have appropriate font licenses</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(5)">
+        <span>Why aren't images loading properly?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-5">
+        <p>If you're experiencing image loading issues, here are common solutions:</p>
+        <ul>
+          <li><strong>Refresh the page:</strong> Sometimes a simple refresh fixes temporary issues</li>
+          <li><strong>Check your connection:</strong> Ensure you have stable internet access</li>
+          <li><strong>Clear browser cache:</strong> Old cached files might cause problems</li>
+          <li><strong>Try another browser:</strong> Some browsers handle images differently</li>
+          <li><strong>Disable ad blockers:</strong> Occasionally, ad blockers interfere with image loading</li>
+          <li><strong>Check browser permissions:</strong> Ensure images are allowed to load</li>
+        </ul>
+        <p><strong>If images still won't load:</strong> Our system includes automatic fallback images. If Google Drive images fail to load, you'll see elegant placeholder designs that maintain the same aesthetic.</p>
+        <p><strong>Mobile users:</strong> If you're on mobile data, try switching to WiFi as some mobile networks restrict certain image sources.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(6)">
+        <span>Can I request specific notepad designs?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-6">
+        <p>Yes! We welcome design requests and suggestions. Here's how to submit requests:</p>
+        <ul>
+          <li><strong>Email:</strong> Send requests to <a href="mailto:requests@chedexnotepads.com">requests@chedexnotepads.com</a></li>
+          <li><strong>Be specific:</strong> Include details about style, theme, colors, and purpose</li>
+          <li><strong>Examples:</strong> Include reference images or links if possible</li>
+          <li><strong>Priority:</strong> Popular requests are prioritized in our design schedule</li>
+        </ul>
+        <p><strong>Types of requests we typically fulfill:</strong></p>
+        <ul>
+          <li>Specific themes (seasons, holidays, occasions)</li>
+          <li>Professional/business templates</li>
+          <li>Educational or specialized layouts</li>
+          <li>Popular aesthetic styles</li>
+        </ul>
+        <p><strong>Note:</strong> While we can't fulfill every individual request, we regularly add new designs based on user feedback and trends.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(7)">
+        <span>How can I support CheDex Free Notepads?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer" id="faq-answer-7">
+        <p>There are several ways to support our project and help us continue providing free resources:</p>
+        <ul>
+          <li><strong>Donate:</strong> Use the PayPal donation button to contribute financially</li>
+          <li><strong>Share:</strong> Tell friends, family, and colleagues about our service</li>
+          <li><strong>Social media:</strong> Follow and share our content on social platforms</li>
+          <li><strong>Feedback:</strong> Send us suggestions for improvements</li>
+          <li><strong>Attribution:</strong> Credit us when using our designs in notable projects</li>
+          <li><strong>Report issues:</strong> Help us improve by reporting bugs or problems</li>
+        </ul>
+        <p><strong>Why support us?</strong> Your support helps us:</p>
+        <ul>
+          <li>Create new templates and features</li>
+          <li>Maintain and improve the website</li>
+          <li>Cover hosting and development costs</li>
+          <li>Keep everything free and accessible</li>
+        </ul>
+        <p>Every donation, no matter how small, makes a difference and is greatly appreciated!</p>
+      </div>
+    </div>
+    
+    <div class="faq-contact">
+      <p><strong>Still have questions?</strong> Check our <a href="/legal/contact.html">Contact page</a> for more ways to get in touch, or browse our <a href="/legal/terms.html">Terms of Service</a> and <a href="/legal/privacy.html">Privacy Policy</a> for detailed information.</p>
+    </div>
+  </div>
+</section>
+
 <div class="footer-top">
   <div class="footer-wrap">
 
@@ -593,15 +921,17 @@ body.editor-open {
         <a href="#notepads">Templates</a>
         <a href="#categories">Categories</a>
         <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
       </div>
     </div>
 
     <div>
       <div class="footer-title">Legal</div>
       <div class="footer-links">
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
+        <a href="/legal/terms.html">Terms of Service</a>
+        <a href="/legal/privacy.html">Privacy Policy</a>
+        <a href="/legal/cookies.html">Cookie Policy</a>
+        <a href="/legal/dmca.html">DMCA</a>
       </div>
     </div>
 
@@ -611,7 +941,7 @@ body.editor-open {
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-pinterest-p"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="https://paypal.me/YOURPAYPAL" target="_blank">
+        <a href="https://paypal.me/chedexfreenotepads" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-paypal"></i>
         </a>
       </div>
@@ -710,94 +1040,238 @@ body.editor-open {
 </div>
 
 <script>
-// Template Data with ALL your Google Drive images
+// ============================================
+// HIGH-PERFORMANCE IMAGE LOADING SYSTEM
+// ============================================
+
 const PER_PAGE = 24;
 
-// Complete collection of all your Google Drive images
+// Optimized template data with pre-loaded low-res versions
 const templates = [
-  // Original images
-  { title: "Floral Notepad Design", cat: "floral", img: "https://lh3.googleusercontent.com/d/1riM6YCU7-Kh9SITYHfiOif4oPUNTuGUc" },
-  { title: "Minimalist Notepad Template", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1RIDQNtzqPSmajCuo8nHPeHSimrCiXO4j" },
-  
-  // New images batch 1
-  { title: "Modern Office Notes", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF" },
-  { title: "Elegant Stationery", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1jNVssmcKlX_VmPxQ7x-QU6G_5UsL4M0o" },
-  { title: "Professional Planner", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1vdYoR5TEfsY3Z1A07bNgH1SbwlX-CbJl" },
-  { title: "Creative Journal", cat: "floral", img: "https://lh3.googleusercontent.com/d/1lC1ESYcz-Stv1-eHwPdDLsUmA_E38Hvl" },
-  { title: "Daily Diary Page", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1qrm1l1sFGQqw7MyUlCYqwcWR59Y7vHiE" },
-  { title: "Simple Note Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1pH3GLoeYkiO5XCYVOlkKz7gg-roNWahv" },
-  { title: "Cute Memo Pad", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/19i5TcnYTr2mtvPd6F3ZApzkiBBfq834F" },
-  { title: "Office Stationery", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1YBmwY0CLxhXGQTmLGHJ1Bd3Tbgp6iLGd" },
-  { title: "Minimalist Writing Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1mN3SXjGYlWmGK99KwNuOwQy61tntyy7E" },
-  { title: "Elegant Writing Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1aIdJelWUO-IiX_Uz9lwZsbDAuYVnbJ30" },
-  { title: "Modern Note Template", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1mysdBQbYKA0JkkG2qW-yX-d7ZV1yMIbI" },
-  { title: "Professional Notepad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1pmE_dbVozw3uZdN6pUjZ27RE9ZhN-gZU" },
-  { title: "Clean Design Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1-hNMcgKslFnnm3FoL-j5D7_dvs5T8pm9" },
-  { title: "Office Memo Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1WXmMWN5gIlqOM1-X8MAVJV1pSNnX8Vnh" },
-  { title: "Classic Notepad Design", cat: "minimal", img: "https://lh3.googleusercontent.com/d/14FagedhzqUvtXGGAMZSNqjbfG-Kwe2P5" },
-  { title: "Writing Journal Page", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1zIkNMPtZAAESCzP939PPzbmiwGfAFNIK" },
-  { title: "Simple Stationery", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1PnGA3KJB-ihCRJzq8Ern9126Ip5g_X20" },
-  { title: "Elegant Note Design", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1zrVUVzB0BRPs94JPumkHaNPcFuClaXNh" },
-  { title: "Professional Writing Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1nsukBoIBt1SgOfZEiwvk_n7hfBNp9lsZ" },
-  
-  // New batch from your latest list
-  { title: "Floral Garden Notes", cat: "floral", img: "https://lh3.googleusercontent.com/d/1bZAW50EGk_aOyb2COQ-YC7IE4tJuzNkQ" },
-  { title: "Minimalist Grid Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1_2dHdaGJBDNTwCpgkH99_FQuxWPWcves" },
-  { title: "Kawaii Cute Diary", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/14NFIa4umNkRofpwlUn8GDckI_k1z7M4r" },
-  { title: "Elegant Writing Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1JC-2JrsVdSvcqVHpKx_4Ye5mdE5W95lY" },
-  { title: "Botanical Journal", cat: "floral", img: "https://lh3.googleusercontent.com/d/1j3xu3Wu7Bvohr_PsRFKX-l-4kXBKdSae" },
-  { title: "Modern Office Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1EhZd8TUTKqMFmrsSqYOhAtnwP6dr68Kc" },
-  { title: "Simple Daily Notes", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1oTXAekBTEFWZ5X-Qn_1eWSyc23JYIUxI" },
-  { title: "Cute Stationery", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/1Md0CnUjT3dkNuiK2bhaDLMHhP8QAW4YT" },
-  { title: "Professional Memo", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1BIrSpLIAFbCIJNYCj9bbN7HVCv41Axjk" },
-  { title: "Elegant Notepad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1NtTbnGsJ0DjrRNtMBxQgIHaz2iC41oh3" },
-  { title: "Floral Design Paper", cat: "floral", img: "https://lh3.googleusercontent.com/d/1G9-82SlDxOPQL0rSDa7w6MkgLBEJREK6" },
-  { title: "Minimalist Template", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1-Z_WmDz5DG4wQEaB-yR1RKVPud3CatFd" },
-  { title: "Kawaii Notes Pad", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/18WtlJUVvo-h0ddNeB968LtyWBKtvmhxI" },
-  { title: "Office Writing Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1HQwdVt-CVlbILUhoC_0zOm3cKnQ5XWuT" },
-  { title: "Creative Journal Pad", cat: "floral", img: "https://lh3.googleusercontent.com/d/1xQ8XVWElqUd8PWsyuqRGO_9pukgoTrH8" },
-  { title: "Simple Writing Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1gP5hkZ7rrlfi3c5Yj9tnuGwel8iaoiuf" },
-  { title: "Modern Diary Page", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1MaPEughc_EnXpTwgbOKnY_0ZOzhRL0Dl" },
-  { title: "Elegant Memo Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1f8jgIoBGJDMGMQg4JEzH2-TPO0gGwjlc" },
-  { title: "Floral Writing Notes", cat: "floral", img: "https://lh3.googleusercontent.com/d/1ci6epDJhJuqheE1ZumX1-mLLb-OV1hEP" },
-  { title: "Minimalist Diary", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1V-1iGZb-Aw95PqMxPnLsrqCLW1bbA9pE" },
-  { title: "Kawaii Writing Pad", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/16Fjfjk80I81n1MC6lS-iJDyzdx-lUrou" },
-  { title: "Office Note Paper", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1NLXo-w0kgp2tEvRv31ruuz9ddZcShGuT" },
-  { title: "Professional Diary", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1-IZJdw9nWCPtH6Y4g-oY7QDHvkKzB38R" },
-  { title: "Elegant Journal", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1fzbchg8fb1PuCxi8tuiTtynNm6gUjZdU" },
-  { title: "Floral Memo Design", cat: "floral", img: "https://lh3.googleusercontent.com/d/1_uanqwHbmnn2_KBjrGdoqvR6s6RAxp9N" },
-  { title: "Simple Notepad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1LU58B8VU1ixOjEweYVL3nQS4_WDIxSCh" },
-  { title: "Modern Writing Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1nWFXsMe3gonOLlHuse2NO4UgADbOMRQw" },
-  { title: "Cute Journal Notes", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/1C7mL825rvQjccVnW5OgiSEJO3N7cLYkK" },
-  { title: "Office Planner Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1w4jyXDik25UfLW0BukecHu2eQORKtOjI" },
-  { title: "Elegant Writing Notes", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1MOIFDn6suXsKwZ0a45X1BXtzYI2xjbiV" },
-  { title: "Floral Diary Page", cat: "floral", img: "https://lh3.googleusercontent.com/d/1RZtb-BrPFmsNn4hcz4-K9nyUWmLWPZsN" },
-  { title: "Minimalist Office Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1-JKACyApSIa-isqBr6g0e10KccFKGUpZ" },
-  { title: "Kawaii Memo Paper", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/11mpDwSfMKj6A6fJTEeZeZszpIDiCE1ie" },
-  { title: "Professional Notes", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1SmK5O6aJaMQk5JrKYtnH-dwwdsOhax4h" },
-  { title: "Simple Journal Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1OFb04iIO6FOIRRGsccj24sd6LHCqfRrC" },
-  { title: "Creative Writing Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1IqdZiViCyIOGfReNQqafDPWwRRtk7aKK" },
-  
-  // Additional variations
-  { title: "Botanical Garden Journal", cat: "floral", img: "https://lh3.googleusercontent.com/d/1riM6YCU7-Kh9SITYHfiOif4oPUNTuGUc" },
-  { title: "Kawaii Cute Memo", cat: "kawaii", img: "https://lh3.googleusercontent.com/d/1RIDQNtzqPSmajCuo8nHPeHSimrCiXO4j" },
-  { title: "Modern Office Diary", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF" },
-  { title: "Elegant Study Notes", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1jNVssmcKlX_VmPxQ7x-QU6G_5UsL4M0o" },
-  { title: "Professional Meeting Pad", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1vdYoR5TEfsY3Z1A07bNgH1SbwlX-CbJl" },
-  { title: "Floral Writing Journal", cat: "floral", img: "https://lh3.googleusercontent.com/d/1lC1ESYcz-Stv1-eHwPdDLsUmA_E38Hvl" },
-  { title: "Simple Daily Planner", cat: "minimal", img: "https://lh3.googleusercontent.com/d/1qrm1l1sFGQqw7MyUlCYqwcWR59Y7vHiE" }
+  {
+    title: "Kawaii Bears, Tulip and Rainbow", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1rLpGEcImRD1JPqVyrgezFgR_mfeFLCVe",
+    lowRes: "https://lh3.googleusercontent.com/d/1rLpGEcImRD1JPqVyrgezFgR_mfeFLCVe=w50-h50-p-k"
+  },
+  {
+    title: "Elegant Floral Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1jNVssmcKlX_VmPxQ7x-QU6G_5UsL4M0o",
+    lowRes: "https://lh3.googleusercontent.com/d/1jNVssmcKlX_VmPxQ7x-QU6G_5UsL4M0o=w50-h50-p-k"
+  },
+  {
+    title: "Kawaii Cute Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1vdYoR5TEfsY3Z1A07bNgH1SbwlX-CbJl",
+    lowRes: "https://lh3.googleusercontent.com/d/1vdYoR5TEfsY3Z1A07bNgH1SbwlX-CbJl=w50-h50-p-k"
+  },
+  {
+    title: "Professional Office Notepad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1lC1ESYcz-Stv1-eHwPdDLsUmA_E38Hvl",
+    lowRes: "https://lh3.googleusercontent.com/d/1lC1ESYcz-Stv1-eHwPdDLsUmA_E38Hvl=w50-h50-p-k"
+  },
+  {
+    title: "Spring Flowers Notepad", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1qrm1l1sFGQqw7MyUlCYqwcWR59Y7vHiE",
+    lowRes: "https://lh3.googleusercontent.com/d/1qrm1l1sFGQqw7MyUlCYqwcWR59Y7vHiE=w50-h50-p-k"
+  },
+  {
+    title: "Simple Grid Paper", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1pH3GLoeYkiO5XCYVOlkKz7gg-roNWahv",
+    lowRes: "https://lh3.googleusercontent.com/d/1pH3GLoeYkiO5XCYVOlkKz7gg-roNWahv=w50-h50-p-k"
+  },
+  {
+    title: "Anime Style Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/19i5TcnYTr2mtvPd6F3ZApzkiBBfq834F",
+    lowRes: "https://lh3.googleusercontent.com/d/19i5TcnYTr2mtvPd6F3ZApzkiBBfq834F=w50-h50-p-k"
+  },
+  {
+    title: "Botanical Journal", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1YBmwY0CLxhXGQTmLGHJ1Bd3Tbgp6iLGd",
+    lowRes: "https://lh3.googleusercontent.com/d/1YBmwY0CLxhXGQTmLGHJ1Bd3Tbgp6iLGd=w50-h50-p-k"
+  },
+  {
+    title: "Modern Minimalist Design", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1mN3SXjGYlWmGK99KwNuOwQy61tntyy7E",
+    lowRes: "https://lh3.googleusercontent.com/d/1mN3SXjGYlWmGK99KwNuOwQy61tntyy7E=w50-h50-p-k"
+  },
+  {
+    title: "Pastel Kawaii Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1aIdJelWUO-IiX_Uz9lwZsbDAuYVnbJ30",
+    lowRes: "https://lh3.googleusercontent.com/d/1aIdJelWUO-IiX_Uz9lwZsbDAuYVnbJ30=w50-h50-p-k"
+  },
+  {
+    title: "Strawberry To Do Lists", 
+    cat: "fruits", 
+    img: "https://lh3.googleusercontent.com/d/1GLXPBmyqmzpgqrF5ubNCUahMltH7xw4J",
+    lowRes: "https://lh3.googleusercontent.com/d/1GLXPBmyqmzpgqrF5ubNCUahMltH7xw4J=w50-h50-p-k"
+  },
+  {
+    title: "Corporate Notepad", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1pmE_dbVozw3uZdN6pUjZ27RE9ZhN-gZU",
+    lowRes: "https://lh3.googleusercontent.com/d/1pmE_dbVozw3uZdN6pUjZ27RE9ZhN-gZU=w50-h50-p-k"
+  },
+  {
+    title: "Cute Animal Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1-hNMcgKslFnnm3FoL-j5D7_dvs5T8pm9",
+    lowRes: "https://lh3.googleusercontent.com/d/1-hNMcgKslFnnm3FoL-j5D7_dvs5T8pm9=w50-h50-p-k"
+  },
+  {
+    title: "Night Sky", 
+    cat: "sky", 
+    img: "https://lh3.googleusercontent.com/d/1TgIpUS6lS9vx8W9c498qSmRag40FTeuH",
+    lowRes: "https://lh3.googleusercontent.com/d/1TgIpUS6lS9vx8W9c498qSmRag40FTeuH=w50-h50-p-k"
+  },
+  {
+    title: "Strawberry Semi-Minimalist", 
+    cat: "fruits", 
+    img: "https://lh3.googleusercontent.com/d/1wlambrkPUa6WZY3-7AlAPKVM1XBqyZAy",
+    lowRes: "https://lh3.googleusercontent.com/d/1wlambrkPUa6WZY3-7AlAPKVM1XBqyZAy=w50-h50-p-k"
+  },
+  {
+    title: "Hello Kitty Style", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1zIkNMPtZAAESCzP939PPzbmiwGfAFNIK",
+    lowRes: "https://lh3.googleusercontent.com/d/1zIkNMPtZAAESCzP939PPzbmiwGfAFNIK=w50-h50-p-k"
+  },
+  {
+    title: "Wildflower Journal", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1PnGA3KJB-ihCRJzq8Ern9126Ip5g_X20",
+    lowRes: "https://lh3.googleusercontent.com/d/1PnGA3KJB-ihCRJzq8Ern9126Ip5g_X20=w50-h50-p-k"
+  },
+  {
+    title: "Dot Grid Paper", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1zrVUVzB0BRPs94JPumkHaNPcFuClaXNh",
+    lowRes: "https://lh3.googleusercontent.com/d/1zrVUVzB0BRPs94JPumkHaNPcFuClaXNh=w50-h50-p-k"
+  },
+  {
+    title: "Chibi Character Notes", 
+    cat: "kawaii", 
+    img: "https://lh3.googleusercontent.com/d/1nsukBoIBt1SgOfZEiwvk_n7hfBNp9lsZ",
+    lowRes: "https://lh3.googleusercontent.com/d/1nsukBoIBt1SgOfZEiwvk_n7hfBNp9lsZ=w50-h50-p-k"
+  },
+  {
+    title: "Tropical Floral Design", 
+    cat: "floral", 
+    img: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF",
+    lowRes: "https://lh3.googleusercontent.com/d/1TK4-C7X7UotSJE7ecTJn-M9khjrD1QaF=w50-h50-p-k"
+  },
+  // Newly added templates
+  {
+    title: "Notebook Template 1", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1HsY2gIZMn3AA9QMy5LyeYSE3BAX4Zlhk",
+    lowRes: "https://lh3.googleusercontent.com/d/1HsY2gIZMn3AA9QMy5LyeYSE3BAX4Zlhk=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 2", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/15c4wCA4YvX3BGzezcSlG2id5TZwydTwc",
+    lowRes: "https://lh3.googleusercontent.com/d/15c4wCA4YvX3BGzezcSlG2id5TZwydTwc=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 3", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1enQ6n6B1XrnPza_RaQYJn5e9Rvb_Psim",
+    lowRes: "https://lh3.googleusercontent.com/d/1enQ6n6B1XrnPza_RaQYJn5e9Rvb_Psim=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 4", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1QAwp7M6cuXOSRc0x34frl3oPt0vV8uhX",
+    lowRes: "https://lh3.googleusercontent.com/d/1QAwp7M6cuXOSRc0x34frl3oPt0vV8uhX=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 5", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1D0DmAkgXCErrDfC6hv7Feo5JBbxtJzYw",
+    lowRes: "https://lh3.googleusercontent.com/d/1D0DmAkgXCErrDfC6hv7Feo5JBbxtJzYw=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 6", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1lB_GxtOWRMXSeeAQsumV7uAq1qi5Kua_",
+    lowRes: "https://lh3.googleusercontent.com/d/1lB_GxtOWRMXSeeAQsumV7uAq1qi5Kua_=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 7", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1YPCJU2J83Ezcs-7VHPraTaOs80A-Iu89",
+    lowRes: "https://lh3.googleusercontent.com/d/1YPCJU2J83Ezcs-7VHPraTaOs80A-Iu89=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 8", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1cGOJuuXuoB3UkwOiCSX7lCF7Qzds3tqE",
+    lowRes: "https://lh3.googleusercontent.com/d/1cGOJuuXuoB3UkwOiCSX7lCF7Qzds3tqE=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 9", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1OqgN-1qkX_a5Gc58U-XsUCkSXLnmLDWD",
+    lowRes: "https://lh3.googleusercontent.com/d/1OqgN-1qkX_a5Gc58U-XsUCkSXLnmLDWD=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 10", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1FWOKvqZ4hnA9SyNv54jHpAeT0irYBeqr",
+    lowRes: "https://lh3.googleusercontent.com/d/1FWOKvqZ4hnA9SyNv54jHpAeT0irYBeqr=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 11", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1-jpK_Wy4gaxiOEZ4GzsuUe0DO64aVvS2",
+    lowRes: "https://lh3.googleusercontent.com/d/1-jpK_Wy4gaxiOEZ4GzsuUe0DO64aVvS2=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 12", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1WaGMCcANCoxucyzPnmq1ltsP2xE5ehPD",
+    lowRes: "https://lh3.googleusercontent.com/d/1WaGMCcANCoxucyzPnmq1ltsP2xE5ehPD=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 13", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1mIM8u3iJux6bo5NTC0eRpqYRZwc7bfgz",
+    lowRes: "https://lh3.googleusercontent.com/d/1mIM8u3iJux6bo5NTC0eRpqYRZwc7bfgz=w50-h50-p-k"
+  },
+  {
+    title: "Notebook Template 14", 
+    cat: "minimal", 
+    img: "https://lh3.googleusercontent.com/d/1OMrhC3lViNg21f0In5jWODVxRiSP0vJZ",
+    lowRes: "https://lh3.googleusercontent.com/d/1OMrhC3lViNg21f0In5jWODVxRiSP0vJZ=w50-h50-p-k"
+  }
 ];
 
-// Create more templates for demo (cycling through all images)
-while(templates.length < 3000) {
-  const baseTemplate = templates[templates.length % templates.length];
-  const newTemplate = {
-    ...baseTemplate,
-    title: `${baseTemplate.title} ${Math.floor(templates.length / 60) + 1}`,
-    img: baseTemplate.img
-  };
-  templates.push(newTemplate);
-}
+// Generate more templates efficiently
+const generateTemplates = () => {
+  const totalTemplates = 3000;
+  const baseCount = templates.length;
+  
+  for (let i = baseCount; i < totalTemplates; i++) {
+    const baseIndex = i % baseCount;
+    const baseTemplate = templates[baseIndex];
+    templates.push({
+      ...baseTemplate,
+      title: `${baseTemplate.title} ${Math.floor(i / baseCount) + 1}`,
+    });
+  }
+};
+
+// Generate templates only when needed
+let templatesGenerated = false;
 
 let currentPage = 1;
 let currentList = templates;
@@ -808,45 +1282,168 @@ let textElement = null;
 let hasDraggedOnce = false;
 let originalImageAspectRatio = 1.333;
 
-// Template grid rendering
+// Image cache for instant loading
+const imageCache = new Map();
+const placeholderCache = new Map();
+
+// Initialize Intersection Observer for lazy loading
+let imageObserver;
+const initImageObserver = () => {
+  imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const src = img.dataset.src;
+        const title = img.dataset.title;
+        
+        if (src) {
+          // Load image with progressive enhancement
+          loadImageWithProgressiveEnhancement(img, src, title);
+        }
+        imageObserver.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: '100px 0px', // Start loading 100px before image enters viewport
+    threshold: 0.1
+  });
+};
+
+// Progressive image loading
+const loadImageWithProgressiveEnhancement = (imgElement, src, title) => {
+  // Check cache first
+  if (imageCache.has(src)) {
+    imgElement.src = imageCache.get(src);
+    imgElement.classList.add('loaded');
+    return;
+  }
+  
+  // Use low-res placeholder while loading
+  const lowResSrc = src.includes('=') ? src : `${src}=w50-h50-p-k`;
+  
+  // Create temporary image for preloading
+  const tempImg = new Image();
+  
+  tempImg.onload = () => {
+    // First set low-res version for immediate display
+    imgElement.src = lowResSrc;
+    imgElement.classList.add('loaded');
+    
+    // Then load high-res version
+    const highResImg = new Image();
+    highResImg.onload = () => {
+      imgElement.src = src;
+      // Cache the image
+      imageCache.set(src, src);
+    };
+    highResImg.onerror = () => {
+      // Fallback to placeholder if high-res fails
+      imgElement.src = getCachedPlaceholder(title);
+    };
+    highResImg.src = src;
+  };
+  
+  tempImg.onerror = () => {
+    // Use cached placeholder if image fails to load
+    imgElement.src = getCachedPlaceholder(title);
+    imgElement.classList.add('loaded');
+  };
+  
+  tempImg.src = lowResSrc;
+};
+
+// Cache placeholder images
+const getCachedPlaceholder = (title) => {
+  if (placeholderCache.has(title)) {
+    return placeholderCache.get(title);
+  }
+  
+  const placeholder = getNotepadPlaceholder(title);
+  placeholderCache.set(title, placeholder);
+  return placeholder;
+};
+
+// Optimized template grid rendering
 function render() {
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
   const start = (currentPage - 1) * PER_PAGE;
   const end = start + PER_PAGE;
   
+  // Generate templates only when needed
+  if (!templatesGenerated && currentPage > 2) {
+    generateTemplates();
+    templatesGenerated = true;
+  }
+  
+  // Create document fragment for better performance
+  const fragment = document.createDocumentFragment();
+  
   currentList.slice(start, end).forEach((t, index) => {
-    grid.innerHTML += `
-    <div class="card">
+    const card = document.createElement('div');
+    card.className = 'card';
+    
+    card.innerHTML = `
       <div class="image-box">
-        <img loading="lazy" src="${t.img}" alt="${t.title}" 
-             onerror="handleImageError(this, '${t.title}')">
+        <div class="lazy-placeholder"></div>
+        <img class="lazy-image" 
+             data-src="${t.img}" 
+             data-title="${t.title}"
+             alt="${t.title}"
+             loading="lazy">
       </div>
       <div class="card-title">${t.title}</div>
       <div class="open-btn" onclick="openEditor('${t.img}', '${t.title}')">Open in Editor</div>
-    </div>`;
+    `;
+    
+    fragment.appendChild(card);
   });
+  
+  grid.appendChild(fragment);
+  
+  // Observe images for lazy loading
+  setTimeout(() => {
+    const lazyImages = grid.querySelectorAll('.lazy-image');
+    lazyImages.forEach(img => {
+      imageObserver.observe(img);
+    });
+  }, 0);
+  
   renderPagination();
 }
 
-function handleImageError(imgElement, title) {
-  console.log('Image failed to load, using fallback:', title);
-  imgElement.src = getNotepadPlaceholder(title);
-  imgElement.alt = title + ' (Preview)';
-}
+// Preload next page images
+const preloadNextPage = () => {
+  const nextPageStart = currentPage * PER_PAGE;
+  const nextPageEnd = nextPageStart + PER_PAGE;
+  
+  currentList.slice(nextPageStart, nextPageEnd).forEach(t => {
+    if (!imageCache.has(t.img)) {
+      const img = new Image();
+      img.src = t.img;
+      imageCache.set(t.img, t.img);
+    }
+  });
+};
 
 function getNotepadPlaceholder(title) {
+  // Check cache first
+  if (placeholderCache.has(title)) {
+    return placeholderCache.get(title);
+  }
+  
   const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
-      <rect width="300" height="400" fill="white"/>
-      <rect x="20" y="20" width="260" height="360" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-      ${Array.from({length: 15}, (_, i) => 
-        `<line x1="40" y1="${60 + i * 20}" x2="260" y2="${60 + i * 20}" stroke="#ddd" stroke-width="1"/>`
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+      <rect width="300" height="200" fill="white"/>
+      <rect x="15" y="15" width="270" height="170" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+      ${Array.from({length: 8}, (_, i) => 
+        `<line x1="30" y1="${35 + i * 15}" x2="270" y2="${35 + i * 15}" stroke="#ddd" stroke-width="0.5"/>`
       ).join('')}
-      <text x="150" y="250" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">${title}</text>
-      <text x="150" y="280" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Click to customize</text>
+      <text x="150" y="100" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">${title.substring(0, 30)}</text>
     </svg>`;
-  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  const dataUri = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  placeholderCache.set(title, dataUri);
+  return dataUri;
 }
 
 function renderPagination() {
@@ -854,10 +1451,12 @@ function renderPagination() {
   const p = document.getElementById("pagination");
   p.innerHTML = "";
   
+  // Previous button
   if (currentPage > 1) {
     p.innerHTML += `<button onclick="goPage(${currentPage - 1})">← Prev</button>`;
   }
   
+  // Page numbers
   const startPage = Math.max(1, currentPage - 2);
   const endPage = Math.min(pages, startPage + 4);
   
@@ -865,8 +1464,14 @@ function renderPagination() {
     p.innerHTML += `<button onclick="goPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
   }
   
+  // Next button
   if (currentPage < pages) {
     p.innerHTML += `<button onclick="goPage(${currentPage + 1})">Next →</button>`;
+  }
+  
+  // Preload next page images
+  if (currentPage < pages) {
+    setTimeout(preloadNextPage, 100);
   }
 }
 
@@ -896,24 +1501,78 @@ function toggleMenu() {
   m.style.display = m.style.display === "flex" ? "none" : "flex";
 }
 
-// EDITOR FUNCTIONS
+// FAQ Functions
+function toggleFAQ(index) {
+  const answer = document.getElementById(`faq-answer-${index}`);
+  const icon = document.querySelectorAll('.faq-icon')[index];
+  
+  if (answer.classList.contains('active')) {
+    answer.classList.remove('active');
+    icon.classList.remove('active');
+    icon.textContent = '+';
+  } else {
+    // Close any other open FAQs
+    document.querySelectorAll('.faq-answer').forEach((faq, i) => {
+      if (i !== index && faq.classList.contains('active')) {
+        faq.classList.remove('active');
+        document.querySelectorAll('.faq-icon')[i].classList.remove('active');
+        document.querySelectorAll('.faq-icon')[i].textContent = '+';
+      }
+    });
+    
+    answer.classList.add('active');
+    icon.classList.add('active');
+    icon.textContent = '−';
+  }
+}
+
+// EDITOR FUNCTIONS - OPTIMIZED
 function openEditor(imageUrl, title) {
+  // Reset state
   hasDraggedOnce = false;
   isDragging = false;
   
+  // Set editor title
   document.getElementById('editorTitle').textContent = `Customize: ${title}`;
+  
+  // Get the image element
   const img = document.getElementById('mainImageEditor');
   
-  const timestamp = new Date().getTime();
-  const imageUrlWithCache = `${imageUrl}?t=${timestamp}`;
+  // Use cached image if available
+  if (imageCache.has(imageUrl)) {
+    img.src = imageCache.get(imageUrl);
+    initializeEditor(img, title);
+  } else {
+    // Add cache-busting parameter only if needed
+    const timestamp = new Date().getTime();
+    const imageUrlWithCache = `${imageUrl}?t=${timestamp}`;
+    
+    // Set the image source
+    img.src = imageUrlWithCache;
+    img.alt = title;
+    
+    initializeEditor(img, title);
+    
+    // Cache the image after loading
+    img.onload = function() {
+      imageCache.set(imageUrl, imageUrl);
+      initializeEditor(img, title);
+    };
+    
+    img.onerror = function() {
+      img.src = getEditorPlaceholder(title);
+      initializeEditor(img, title);
+    };
+  }
   
-  img.src = imageUrlWithCache;
-  img.alt = title;
-  
+  // Show editor immediately
   const editor = document.getElementById('editorModal');
   editor.style.display = 'block';
   document.body.classList.add('editor-open');
-  
+}
+
+function initializeEditor(img, title) {
+  // Create or update draggable text element
   const canvasContainer = document.getElementById('canvasContainer');
   if (!textElement) {
     textElement = document.createElement('div');
@@ -923,8 +1582,13 @@ function openEditor(imageUrl, title) {
     canvasContainer.appendChild(textElement);
   } else {
     textElement.textContent = title;
+    // Reset text position
+    textElement.style.left = '50%';
+    textElement.style.top = '50%';
+    textElement.style.transform = 'translate(-50%, -50%)';
   }
   
+  // Reset controls
   document.getElementById('textInputEditor').value = title;
   document.getElementById('fontSelectEditor').value = 'Arial';
   document.getElementById('sizeInputEditor').value = 36;
@@ -933,37 +1597,40 @@ function openEditor(imageUrl, title) {
   document.getElementById('shadowInputEditor').value = 45;
   document.getElementById('shadowValue').textContent = '45';
   
+  // Update text styles
   updateTextStyles();
+  
+  // Initialize drag and drop
   initDragAndDrop();
   
+  // Show drag hint
   document.getElementById('dragHint').style.display = 'block';
   
-  img.onload = function() {
-    if (img.naturalWidth && img.naturalHeight) {
-      originalImageAspectRatio = img.naturalWidth / img.naturalHeight;
-    }
-    adjustContainerSize();
-    centerTextOnImage();
-    setTimeout(() => {
-      document.getElementById('dragHint').style.display = 'none';
-    }, 3000);
-    
-    if (window.innerWidth <= 768) {
-      const editorContainer = document.querySelector('.editor-container');
-      editorContainer.scrollTop = 0;
-    }
-  };
-  
-  img.onerror = function() {
-    console.error('Failed to load editor image:', imageUrl);
-    img.src = getEditorPlaceholder(title);
-    img.onload();
-  };
-  
-  if (img.complete) {
-    img.onload();
+  // Get the original image dimensions
+  if (img.naturalWidth && img.naturalHeight) {
+    originalImageAspectRatio = img.naturalWidth / img.naturalHeight;
+  } else {
+    originalImageAspectRatio = 1.333;
   }
   
+  // Adjust container size to match image aspect ratio
+  adjustContainerSize();
+  
+  // Center text on image
+  centerTextOnImage();
+  
+  // Hide drag hint after a few seconds
+  setTimeout(() => {
+    document.getElementById('dragHint').style.display = 'none';
+  }, 2000);
+  
+  // Scroll to top of editor on mobile
+  if (window.innerWidth <= 768) {
+    const editorContainer = document.querySelector('.editor-container');
+    editorContainer.scrollTop = 0;
+  }
+  
+  // Set up resize listener
   window.addEventListener('resize', adjustContainerSize);
 }
 
@@ -1002,12 +1669,15 @@ function adjustContainerSize() {
   } else {
     const maxWidth = canvasArea.clientWidth - 40;
     const maxHeight = canvasArea.clientHeight - 40;
+    
     let width = maxWidth;
     let height = width / originalImageAspectRatio;
+    
     if (height > maxHeight) {
       height = maxHeight;
       width = height * originalImageAspectRatio;
     }
+    
     container.style.width = width + 'px';
     container.style.height = height + 'px';
   }
@@ -1015,26 +1685,28 @@ function adjustContainerSize() {
   if (textElement) {
     const containerRect = container.getBoundingClientRect();
     const textRect = textElement.getBoundingClientRect();
+    
     const currentLeft = parseFloat(textElement.style.left) || 0;
     const currentTop = parseFloat(textElement.style.top) || 0;
+    
     const maxX = containerRect.width - textRect.width;
     const maxY = containerRect.height - textRect.height;
-    if (currentLeft > maxX) {
-      textElement.style.left = Math.max(0, maxX) + 'px';
-    }
-    if (currentTop > maxY) {
-      textElement.style.top = Math.max(0, maxY) + 'px';
-    }
+    
+    if (currentLeft > maxX) textElement.style.left = Math.max(0, maxX) + 'px';
+    if (currentTop > maxY) textElement.style.top = Math.max(0, maxY) + 'px';
   }
 }
 
 function centerTextOnImage() {
   if (!textElement) return;
+  
   const container = document.getElementById('canvasContainer');
   const containerRect = container.getBoundingClientRect();
   const textRect = textElement.getBoundingClientRect();
+  
   const centerX = (containerRect.width - textRect.width) / 2;
   const centerY = (containerRect.height - textRect.height) / 2;
+  
   textElement.style.left = centerX + 'px';
   textElement.style.top = centerY + 'px';
   textElement.style.transform = 'none';
@@ -1042,6 +1714,14 @@ function centerTextOnImage() {
 
 function initDragAndDrop() {
   if (!textElement) return;
+  
+  // Clear existing event listeners
+  textElement.onmousedown = null;
+  textElement.ontouchstart = null;
+  document.onmousemove = null;
+  document.ontouchmove = null;
+  document.onmouseup = null;
+  document.ontouchend = null;
   
   textElement.onmousedown = function(e) {
     startDrag(e.clientX, e.clientY);
@@ -1158,6 +1838,7 @@ function downloadImage() {
   const download = function() {
     canvas.width = img.naturalWidth;
     canvas.height = img.naturalHeight;
+    
     ctx.drawImage(img, 0, 0);
     
     const textRect = textElement.getBoundingClientRect();
@@ -1206,17 +1887,21 @@ function handleFontUpload() {
   reader.onload = function(e) {
     const fontData = e.target.result;
     const fontName = file.name.replace(/\.[^/.]+$/, "");
+    
     const font = new FontFace(fontName, `url(${fontData})`);
     
     font.load().then(function(loadedFont) {
       document.fonts.add(loadedFont);
+      
       const select = document.getElementById('fontSelectEditor');
       const option = document.createElement('option');
       option.value = fontName;
       option.textContent = fontName + ' (custom)';
       select.appendChild(option);
+      
       select.value = fontName;
       updateTextStyles();
+      
       alert(`Font "${fontName}" loaded successfully!`);
     }).catch(function(error) {
       console.error('Font loading failed:', error);
@@ -1227,6 +1912,7 @@ function handleFontUpload() {
   reader.readAsDataURL(file);
 }
 
+// Initialize event listeners
 function initEditorControls() {
   document.getElementById('textInputEditor').addEventListener('input', updateTextStyles);
   document.getElementById('fontSelectEditor').addEventListener('change', updateTextStyles);
@@ -1244,6 +1930,7 @@ function initEditorControls() {
   });
 }
 
+// Top arrow functionality
 window.addEventListener("scroll", () => {
   document.getElementById("toTop").style.display = window.scrollY > 500 ? "block" : "none";
 });
@@ -1252,6 +1939,7 @@ function scrollTopSmooth() {
   window.scrollTo({top: 0, behavior: "smooth"});
 }
 
+// IMAGE PROTECTION - Disable right-click, drag, and long press
 document.addEventListener('contextmenu', function(e) {
   if (e.target.tagName === 'IMG') {
     e.preventDefault();
@@ -1277,10 +1965,29 @@ document.addEventListener('touchstart', function(e) {
   }
 }, { passive: false });
 
+// Initialize everything when page loads
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize image observer
+  initImageObserver();
+  
+  // Render initial page
   render();
+  
+  // Initialize editor controls
   initEditorControls();
   
+  // Preload first few images for instant display
+  setTimeout(() => {
+    templates.slice(0, 8).forEach(t => {
+      if (!imageCache.has(t.img)) {
+        const img = new Image();
+        img.src = t.lowRes || t.img;
+        imageCache.set(t.img, t.img);
+      }
+    });
+  }, 100);
+  
+  // Add keyboard shortcuts for editor
   document.addEventListener('keydown', function(e) {
     const editorOpen = document.getElementById('editorModal').style.display === 'block';
     if (editorOpen) {
@@ -1297,6 +2004,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+  
+  // Open first FAQ by default
+  setTimeout(() => toggleFAQ(0), 500);
 });
 </script>
 
